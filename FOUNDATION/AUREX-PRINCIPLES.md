@@ -298,3 +298,69 @@ Before approval, ask:
 - Is the website technically ready to earn traffic and convert it?
 
 If the answers are weak, the work is not finished.
+
+## 19. Creative direction should be discovered from the business
+
+Do not begin by asking which popular website aesthetic to imitate.
+
+Look for an ownable creative thread inside the client's business, customer outcome, logo, product, physical environment, process, language, history, geography, or category.
+
+A strong concept can influence the experience itself.
+
+For example, a business centered on vision and clarity may support focus-based image reveals, lens-like framing, glass-inspired surfaces, and transitions from blur to clarity. The effect works because it reinforces the business promise, not because the animation is fashionable.
+
+The best Aurex concepts should feel difficult to transplant unchanged onto an unrelated client.
+
+## 20. Premium is an experience, not a component checklist
+
+Do not define premium as a serif font, a black background, large whitespace, glassmorphism, cinematic motion, or any other isolated trend.
+
+Judge premium quality by the combined experience:
+
+- clarity
+- visual hierarchy
+- imagery
+- typography
+- color relationships
+- motion restraint
+- transitions
+- interaction quality
+- responsive behavior
+- copy quality
+- performance
+- consistency
+- detail
+- trust
+- technical quality
+
+A premium site should feel considered at both the obvious and subtle levels.
+
+## 21. Lead capture is a designed interaction
+
+When leads are the primary business outcome, forms deserve the same design attention as the hero.
+
+The system should determine which information is truly required at first contact and choose an appropriate interaction pattern.
+
+A simple form may be best for a simple request. A multi-step flow may be better when progressive disclosure genuinely reduces complexity or supports qualification.
+
+Do not make forms longer merely to satisfy internal curiosity.
+
+A lead flow should clearly communicate what happens next and should be tested through the entire delivery, tracking, and follow-up path.
+
+## 22. Autonomous execution should preserve human creative judgment
+
+Aurex should reduce the amount of routine work the human creative lead must perform without removing the human from the decisions where taste, positioning, or business knowledge matters most.
+
+The system should act autonomously when the approved strategy makes the answer clear.
+
+It should bring decisions back when they are subjective, expensive to reverse, strategically material, based on uncertain evidence, or represent multiple genuinely strong creative paths.
+
+When asking for a decision, provide a recommendation and explain the tradeoffs rather than asking the human to solve the problem from scratch.
+
+## 23. Human-facing copy should not advertise that it was generated
+
+Avoid formulaic AI writing patterns, vague filler, repetitive structures, and punctuation habits that make the copy feel machine-generated.
+
+Do not use en dashes or em dashes in generated website copy. Rewrite the sentence or use more natural punctuation.
+
+The goal is not to hide technology. The goal is to produce writing that feels specific, intentional, and appropriate to the brand.
