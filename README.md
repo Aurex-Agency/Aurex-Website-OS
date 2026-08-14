@@ -78,6 +78,46 @@ The system should automate research, analysis, production, refinement, and QA wh
 
 Once a direction is approved, the system should handle routine implementation autonomously rather than requesting approval for every small decision.
 
+## Specialist operating brain
+
+Phase 2 adds reusable Claude Code skills and specialist agents so the system can apply Aurex methods consistently instead of relying on one giant prompt.
+
+### Skills
+
+- `/aurex-website` coordinates the complete project lifecycle
+- `/aurex-discovery` develops project-specific business and customer insight
+- `/aurex-research` grounds material decisions in evidence
+- `/aurex-site-architecture` designs useful multi-page structure and internal linking
+- `/aurex-art-direction` develops business-native creative directions
+- `/aurex-conversion` designs CTA, form, trust, and lead-flow systems
+- `/aurex-copy` develops specific human-sounding website messaging
+- `/aurex-page-design` translates strategy into page narratives and implementation
+- `/aurex-motion` creates a purposeful motion language
+- `/aurex-responsive` treats mobile and intermediate widths as active design problems
+- `/aurex-seo` plans and audits evidence-based organic visibility
+- `/aurex-visual-qa` performs browser-based quality review and iteration
+
+### Specialist agents
+
+- Research Director
+- Creative Director
+- Conversion Strategist
+- SEO Strategist
+- Content Strategist
+- Motion Director
+- Frontend Architect
+- QA Reviewer
+
+Specialists should improve judgment and context management, not create bureaucracy. Major cross-disciplinary decisions remain coordinated through the primary project conversation.
+
+## Executive output quality
+
+Major Aurex outputs should follow `FOUNDATION/OUTPUT-STANDARD.md`.
+
+The system should lead with the recommendation, prioritize the highest-impact findings, distinguish facts from judgment, state confidence and uncertainty honestly, explain tradeoffs, and make the next action obvious.
+
+Final website quality is reviewed against `FOUNDATION/QUALITY-SCORECARD.md` and the browser-based QA process.
+
 ## Repository structure
 
 - `CLAUDE.md` - persistent operating constitution for Claude Code
@@ -85,24 +125,21 @@ Once a direction is approved, the system should handle routine implementation au
 - `FOUNDATION/CREATIVE-CONCEPT-METHOD.md` - method for discovering business-native creative ideas
 - `FOUNDATION/LEAD-CONVERSION-STANDARD.md` - lead capture and form UX standard
 - `FOUNDATION/PROJECT-WORKFLOW.md` - full collaborative project lifecycle
-- `templates/PROJECT-BRIEF.md` - standard intake and strategy brief
-- `.claude/rules/` - scoped persistent implementation rules, added in later phases
-- `.claude/skills/` - reusable specialist workflows, added in later phases
-- `.claude/agents/` - specialist reviewers and operators, added in later phases
+- `FOUNDATION/OUTPUT-STANDARD.md` - high-level consultant output standard
+- `FOUNDATION/QUALITY-SCORECARD.md` - internal final-quality judgment framework
+- `templates/` - durable project artifact templates
+- `.claude/skills/` - reusable specialist workflows
+- `.claude/agents/` - specialist reviewers and operators
+- `.claude/rules/` - scoped implementation rules to be added in a later phase
 - `references/` - evolving research, patterns, anti-patterns, and inspiration knowledge
+- `USAGE.md` - instructions for attaching the OS to client repositories
 
 ## Current stage
 
-**Phase 1: Foundation complete and calibrated**
+**Phase 2: Specialist brain built**
 
-Phase 1 establishes:
+Phase 1 established the principles, creative concept method, lead conversion standard, workflow, collaboration model, and project brief.
 
-- the Aurex principles
-- the persistent Claude constitution
-- the business-native creative concept method
-- the lead conversion standard
-- the project workflow
-- collaboration and approval gates
-- the client project brief
+Phase 2 adds the reusable skill layer, specialist agents, executive output standard, quality scorecard, project handoff templates, and cross-repository usage workflow.
 
-The next phase adds the specialist operating brain: discovery, research, art direction, page design, conversion, SEO, motion, responsive design, visual QA, and specialist agents.
+The next phase should focus on implementation infrastructure: frontend engineering rules, preferred stack and dependency policy, browser automation and visual verification, deterministic hooks, accessibility and technical QA automation, analytics standards, launch checks, and a cleaner distribution method such as packaging the OS for repeated use across client repositories.
