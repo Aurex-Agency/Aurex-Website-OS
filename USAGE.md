@@ -14,9 +14,46 @@ Keep the OS cloned somewhere stable:
     client-two/
 ```
 
-## Start Claude Code with the OS attached
+## Recommended one-command launcher
 
-From inside a client repository:
+The repo includes:
+
+```text
+bin/aurex
+```
+
+On macOS/Linux, make it executable once:
+
+```bash
+chmod +x ~/Aurex/Aurex-Website-OS/bin/aurex
+```
+
+Then either call it directly or add a symlink somewhere on your PATH, for example:
+
+```bash
+mkdir -p ~/.local/bin
+ln -s ~/Aurex/Aurex-Website-OS/bin/aurex ~/.local/bin/aurex
+```
+
+Make sure `~/.local/bin` is on your PATH.
+
+After that, from any client repository you can start Claude Code with Aurex OS attached using:
+
+```bash
+aurex
+```
+
+The launcher resolves the real OS directory even when invoked through a symlink and enables additional-directory Claude memory automatically.
+
+Any extra Claude CLI arguments are passed through:
+
+```bash
+aurex --chrome
+```
+
+## Start Claude Code manually
+
+If you do not use the launcher, from inside a client repository run:
 
 ```bash
 CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1 claude --add-dir ../../Aurex-Website-OS
@@ -137,8 +174,6 @@ Aurex includes starter hook files under:
 starter/.claude/settings.json
 starter/.aurex/hooks/
 ```
-
-The starter behavior includes:
 
 ### Format-on-edit
 
