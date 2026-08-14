@@ -1,22 +1,52 @@
 ---
 name: aurex-website
-description: Orchestrates a full Aurex website project from intake through launch and post-launch learning. Use when starting, continuing, or coordinating a complete client website build.
+description: Orchestrates a complete Aurex website project while matching process depth to the task. Use when starting, continuing, or coordinating client website work.
 disable-model-invocation: true
 ---
 
 # Aurex Website Orchestrator
 
-Use this skill as the top-level operating workflow for a complete Aurex website project.
+Use this skill as the top-level operating workflow for Aurex website work.
 
-## First rule
+## First decision: choose the operating mode
 
-Do not jump into implementation because a client name, logo, or current website is available. Establish enough strategy and creative direction to make the build intentional.
+Before expanding context or invoking specialists, read `FOUNDATION/EFFICIENCY-STANDARD.md` and choose the smallest mode that can reliably produce an excellent result.
 
-Read the relevant foundation standards before major decisions:
+Use `/aurex-mode` when the correct mode is not obvious.
+
+### QUICK
+
+For bounded, low-risk changes inside approved strategy and design language.
+
+Default: primary session, directly relevant files, no broad research, no specialist by default, targeted verification.
+
+### STANDARD
+
+For meaningful page, feature, conversion, design, or content work.
+
+Default: primary session, relevant skills, zero to two focused specialists when useful, browser verification, durable artifact updates when decisions change.
+
+STANDARD is the normal default for day-to-day production work.
+
+### DEEP
+
+For new websites, major redesigns, architecture or migration decisions, major conversion systems, or final high-stakes reviews.
+
+Use multiple specialists only when each has a distinct question and deliverable.
+
+Do not use DEEP merely because the project is important while the current task is small.
+
+## Shared foundation
+
+Read only the standards relevant to the current work. Do not load every foundation document automatically.
+
+Common references include:
 
 - `FOUNDATION/AUREX-PRINCIPLES.md`
 - `FOUNDATION/PROJECT-WORKFLOW.md`
 - `FOUNDATION/CREATIVE-CONCEPT-METHOD.md`
+- `FOUNDATION/EFFICIENCY-STANDARD.md`
+- `FOUNDATION/COLLABORATION-PROTOCOL.md`
 - `FOUNDATION/OUTPUT-STANDARD.md`
 - `FOUNDATION/QUALITY-SCORECARD.md`
 - `FOUNDATION/LEAD-CONVERSION-STANDARD.md` when lead generation is relevant
@@ -25,10 +55,12 @@ Read the relevant foundation standards before major decisions:
 - `FOUNDATION/ACCESSIBILITY-STANDARD.md` during implementation and QA
 - `FOUNDATION/SECURITY-STANDARD.md` when handling public inputs, integrations, authentication, or secrets
 - `FOUNDATION/ANALYTICS-STANDARD.md` for measurement
-- `FOUNDATION/QUALITY-AUTOMATION.md` when configuring hooks, browser tests, or CI
+- `FOUNDATION/QUALITY-AUTOMATION.md` for hooks, browser tests, or CI
 - active project artifacts and approved decisions
 
-## Operating sequence
+## Full project sequence
+
+DEEP new-site work normally moves through:
 
 1. Intake and brief
 2. Discovery and research
@@ -38,25 +70,26 @@ Read the relevant foundation standards before major decisions:
 6. Technical stack validation and project setup
 7. Design system, engineering plan, and homepage structure
 8. Hero visual proof
-9. Homepage build
-10. Homepage visual and technical verification
-11. Page-category bundles
-12. Content and SEO depth
-13. Conversion review and form QA
-14. Motion and interaction pass
-15. Responsive and accessibility QA
-16. Performance audit
-17. Technical QA
-18. Final independent creative/QA review
-19. Launch readiness and launch
-20. Post-launch measurement and learning
+9. Homepage build and verification
+10. Page-category bundles
+11. Content and SEO depth
+12. Conversion review and form QA
+13. Motion and interaction pass
+14. Responsive and accessibility QA
+15. Performance audit
+16. Technical QA
+17. Final independent creative/QA review
+18. Launch readiness and launch
+19. Post-launch measurement and learning
 
-Use the dedicated Aurex skills for each specialist stage instead of improvising a new process.
+QUICK and STANDARD tasks should not replay this full sequence. Enter at the relevant stage and perform only the process required for the current work unit.
 
 ## Specialist skills
 
-Use the skill that matches the task:
+Use only the skills relevant to the task:
 
+- `/aurex-mode`
+- `/aurex-handoff`
 - `/aurex-discovery`
 - `/aurex-research`
 - `/aurex-site-architecture`
@@ -79,13 +112,13 @@ Use the skill that matches the task:
 
 ## Specialist delegation
 
-Use agents when independent context, deep expertise, or an unbiased second opinion improves the result.
+Before invoking an agent, define the exact question and expected output.
 
-Examples:
+Useful specialists include:
 
-- Research Director for broad evidence gathering and synthesis
-- Creative Director at concept and visual approval gates
-- Conversion Strategist for important lead-flow decisions
+- Research Director for broad evidence gathering
+- Creative Director for major concept and visual judgment
+- Conversion Strategist for material lead-flow decisions
 - SEO Strategist for architecture, migration, and material organic decisions
 - Content Strategist for messaging hierarchy and copy review
 - Motion Director for signature interactions
@@ -95,27 +128,46 @@ Examples:
 - QA Reviewer for independent pre-approval review
 - Launch Engineer for production migration and release verification
 
-Do not delegate every task simply because an agent exists. Keep cross-disciplinary synthesis in the main project conversation.
+Do not delegate every task because agents exist. Prefer one focused specialist over overlapping specialists. Do not use agent teams by default.
+
+## ChatGPT and Claude collaboration
+
+Follow `FOUNDATION/COLLABORATION-PROTOCOL.md` when work is moving between ChatGPT strategy/review and Claude implementation.
+
+Use:
+
+- `AUREX-BRIEF.md` for focused implementation assignments
+- `AUREX-STATUS.md` for current project state and handoff
+- `AUREX-REVIEW.md` for focused review findings
+
+Do not copy whole chat transcripts into project context.
+
+Claude should implement from approved durable decisions. After meaningful work, update status and push the focused branch or PR. ChatGPT can review the GitHub implementation and return prioritized revision requirements.
 
 ## Collaboration behavior
 
-Operate autonomously inside an approved direction. Escalate decisions when they are highly subjective, expensive to reverse, strategically material, based on weak/conflicting evidence, or represent multiple strong options.
+Operate autonomously inside approved direction. Escalate decisions when they are highly subjective, expensive to reverse, strategically material, based on weak or conflicting evidence, or represent multiple strong options.
 
 When escalating, provide:
 
-1. the recommended choice
-2. why it is recommended
+1. recommendation
+2. reasoning
 3. strongest alternatives
 4. tradeoffs
-5. the exact decision required from the human creative lead
+5. exact decision required from the human creative lead
 
 Do not ask for approval on routine implementation details.
 
-## Project state
+## Project state and context discipline
 
-At the start of a session, determine the current stage from existing files and code. Do not restart discovery or redo approved work without a reason.
+At the start of a session:
 
-Recommended durable project artifacts include:
+1. read `AUREX-STATUS.md` when present
+2. read only the approved artifacts relevant to the current task
+3. inspect only the source files necessary to understand the work
+4. do not restart discovery or repeat settled research without a reason
+
+Recommended durable artifacts include:
 
 - `PROJECT-BRIEF.md`
 - `DISCOVERY.md`
@@ -124,76 +176,52 @@ Recommended durable project artifacts include:
 - `CREATIVE-DIRECTION.md`
 - `DESIGN-SYSTEM.md`
 - `ENGINEERING-PLAN.md`
+- `AUREX-BRIEF.md`
+- `AUREX-STATUS.md`
 - page specs as needed
 - `SEO-PLAN.md` where complexity warrants it
 - `CONVERSION-PLAN.md` where complexity warrants it
 - `QA-REPORT.md`
 - `LAUNCH-CHECKLIST.md`
 
-Use templates when they preserve decisions and improve handoff. Do not create documents only to make the process look sophisticated.
+Before clearing or ending a long session, preserve durable decisions and update `AUREX-STATUS.md` so the next session does not require the old transcript.
 
 ## Engineering behavior
 
-Before major implementation:
+Before major implementation, validate the stack and project quality setup when relevant. During implementation, preserve the approved creative language, server-first rendering, accessibility, media responsibility, conversion delivery, and measurement.
 
-- validate the stack with `/aurex-stack`
-- configure the project with `/aurex-project-setup` when adopting the OS
-- create the engineering plan for non-trivial projects
-- preserve server-first rendering and narrow client boundaries
-- encode client-specific design tokens
-- define media and motion responsibility
-- define primary conversion delivery and measurement
+Use browser inspection repeatedly for user-facing work.
 
-During implementation, use `/aurex-engineering` and verify in the actual browser repeatedly.
+## Verification depth
+
+Match verification to the operating mode and risk.
+
+QUICK: targeted checks for the changed behavior.
+
+STANDARD: browser inspection, relevant tests, responsive review, and affected conversion/accessibility checks.
+
+DEEP: comprehensive checks appropriate to the project gate, including build, representative routes, accessibility, performance, conversion, analytics, SEO, and launch safety where relevant.
+
+Efficiency never means claiming something passed when it was not verified.
 
 ## Quality control
 
 Do not equate completion with code generation.
 
-At major build milestones verify against:
+At major milestones verify against the relevant business objective, conversion strategy, creative concept, responsive behavior, accessibility, SEO intent, performance, security, analytics, and actual browser experience.
 
-- business objective
-- conversion strategy
-- creative concept
-- visual hierarchy and imagery
-- responsive behavior
-- accessibility
-- SEO intent and crawlability
-- performance
-- security
-- analytics
-- actual browser experience
-
-Use `FOUNDATION/QUALITY-SCORECARD.md` as an internal diagnostic framework. A high average cannot compensate for a broken conversion, inaccessible interaction, crawlability mistake, exposed secret, or failed production build.
-
-## Pre-launch gate
-
-Before launch readiness, run as relevant:
-
-1. `/aurex-form-qa`
-2. `/aurex-accessibility`
-3. `/aurex-performance`
-4. `/aurex-technical-qa`
-5. `/aurex-visual-qa`
-
-Resolve blockers and critical findings.
-
-Then use `/aurex-launch` with the project launch checklist.
-
-## Evidence standard
-
-When a recommendation depends on a current technical fact, standard, SEO behavior, security practice, accessibility rule, browser behavior, or library/framework capability, prefer current primary documentation.
-
-Do not turn remembered defaults into permanent Aurex doctrine when tools evolve.
+Use `FOUNDATION/QUALITY-SCORECARD.md` for major final reviews. A high average cannot compensate for a broken conversion, inaccessible interaction, crawlability mistake, exposed secret, or failed production build.
 
 ## Output quality
 
-Major strategy, research, audit, and approval outputs must follow `FOUNDATION/OUTPUT-STANDARD.md`.
+Major strategy, research, audit, and approval outputs should follow `FOUNDATION/OUTPUT-STANDARD.md`.
 
-Lead with the recommendation. Prioritize findings. Distinguish facts from judgment. Explain important mechanisms and tradeoffs. Surface uncertainty honestly. Make the next action obvious.
+Lead with the recommendation. Prioritize. Distinguish facts from judgment. Explain meaningful tradeoffs. Make the next action obvious.
 
-## Anti-rush rule
+## Anti-rush and anti-waste rule
 
-If the site looks generic, repetitive, weakly branded, poorly converted, visually unfinished, inaccessible, slow, insecure, difficult to crawl, or technically fragile, continue iterating.
+If the site is generic, weakly branded, poorly converted, inaccessible, slow, insecure, difficult to crawl, or technically fragile, continue iterating.
 
-Do not declare success because requested files exist, the page renders, or a deploy completed.
+At the same time, do not spend DEEP-mode effort on a bounded task that is already understood.
+
+Excellent work is both high quality and proportionate.
