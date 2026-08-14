@@ -1,10 +1,56 @@
 # Using Aurex Website OS on Client Projects
 
-Aurex Website OS is a shared operating brain that supports separate client repositories while preserving client-specific code, content, creative direction, and project memory.
+Aurex Website OS is a shared operating brain for separate client repositories. It should increase quality without forcing every task through the full agency process.
+
+If you are new to the system, read `COLLABORATION-QUICKSTART.md` first.
+
+## The simple mental model
+
+```text
+ChatGPT
+strategy + research + review
+        ↓
+GitHub durable brief
+        ↓
+Claude Code
+implementation + browser + tests
+        ↓
+GitHub status + branch/PR
+        ↓
+ChatGPT
+focused review
+        ↓
+Claude Code
+revision + verification
+```
+
+Do not make both systems redo the same work.
+
+## Operating modes
+
+Use `/aurex-mode` when the correct depth is unclear.
+
+### QUICK
+
+Small, bounded, low-risk changes inside an approved strategy.
+
+Default: no specialists, no broad research, targeted verification.
+
+### STANDARD
+
+Meaningful daily production work such as a page, section, feature, lead flow, or approved homepage implementation.
+
+Default: primary session, relevant skills, zero to two focused specialists when useful, browser verification.
+
+### DEEP
+
+New websites, major redesigns, architecture/migration decisions, major conversion systems, or high-stakes final audits.
+
+DEEP is not the default.
+
+See `FOUNDATION/EFFICIENCY-STANDARD.md`.
 
 ## Recommended local layout
-
-Keep the OS cloned somewhere stable:
 
 ```text
 ~/Aurex/
@@ -16,64 +62,49 @@ Keep the OS cloned somewhere stable:
 
 ## Recommended one-command launcher
 
-The repo includes:
+The repo includes `bin/aurex`.
 
-```text
-bin/aurex
-```
-
-On macOS/Linux, make it executable once:
+On macOS/Linux:
 
 ```bash
 chmod +x ~/Aurex/Aurex-Website-OS/bin/aurex
-```
-
-Then either call it directly or add a symlink somewhere on your PATH, for example:
-
-```bash
 mkdir -p ~/.local/bin
 ln -s ~/Aurex/Aurex-Website-OS/bin/aurex ~/.local/bin/aurex
 ```
 
 Make sure `~/.local/bin` is on your PATH.
 
-After that, from any client repository you can start Claude Code with Aurex OS attached using:
+From a client repository:
 
 ```bash
 aurex
 ```
 
-The launcher resolves the real OS directory even when invoked through a symlink and enables additional-directory Claude memory automatically.
-
-Any extra Claude CLI arguments are passed through:
+Extra Claude CLI arguments pass through:
 
 ```bash
 aurex --chrome
 ```
 
-## Start Claude Code manually
+## Manual launch
 
-If you do not use the launcher, from inside a client repository run:
+From inside a client repository:
 
 ```bash
 CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1 claude --add-dir ../../Aurex-Website-OS
 ```
 
-Adjust the path to the OS on your machine.
+Adjust the path for your machine.
 
-The environment variable tells Claude Code to load shared `CLAUDE.md` and `.claude/rules/` from the additional directory. The added directory also makes the OS skills and agents available.
+## First-time setup in a client repo
 
-## First-time setup inside a client repo
-
-After attaching the OS, run:
+Run:
 
 ```text
 /aurex-project-setup
 ```
 
-This should inspect the active client repository before making changes.
-
-It may configure or recommend:
+The setup skill inspects the real repository before proposing changes. It may configure or recommend:
 
 - project-specific Claude instructions
 - actual typecheck/lint/test/build scripts
@@ -85,7 +116,7 @@ It may configure or recommend:
 
 It must merge existing configuration instead of overwriting it blindly.
 
-## Start or continue the project
+## Start or continue work
 
 Use:
 
@@ -93,15 +124,99 @@ Use:
 /aurex-website
 ```
 
-For a new project, provide the client context and build the project brief.
+The orchestrator should first determine the operating mode and current project state.
 
-For an existing project, ask the orchestrator to determine the current stage from existing project artifacts and code.
+For a bounded task you may invoke the relevant skill directly instead of running the full website process.
 
-Do not redo approved work without a reason.
+## Collaboration files
 
-## Core project artifacts
+### `AUREX-BRIEF.md`
 
-Recommended durable project memory:
+Focused assignment handed into implementation.
+
+Use `templates/AUREX-BRIEF.md`.
+
+It stores:
+
+- objective
+- approved context
+- exact scope
+- creative and conversion intent
+- constraints
+- acceptance criteria
+- verification requirements
+
+It should not contain entire strategy conversations.
+
+### `AUREX-STATUS.md`
+
+Concise current project checkpoint.
+
+Use `templates/AUREX-STATUS.md`.
+
+Update it after meaningful work and before clearing a long session.
+
+It stores:
+
+- current branch/PR
+- approved state
+- recent work
+- verification
+- known issues
+- requested review
+- next action
+
+### `AUREX-REVIEW.md`
+
+Focused review format for ChatGPT, the human creative lead, or another reviewer.
+
+Use `templates/AUREX-REVIEW.md`.
+
+It separates:
+
+- blockers
+- important revisions
+- polish
+- optional experiments
+- elements that must be preserved
+
+## Recommended ChatGPT to Claude workflow
+
+### Strategy or direction
+
+Use ChatGPT for broad research, strategy, creative direction, conversion reasoning, and prioritization when those tasks benefit from external research or a second strategic brain.
+
+After approval, compress the decision into `AUREX-BRIEF.md`.
+
+### Implementation
+
+Claude Code reads the brief, status, and only the project files relevant to the current assignment.
+
+It implements, verifies, updates `AUREX-STATUS.md`, and pushes a focused branch or PR.
+
+### Review
+
+Ask ChatGPT to inspect the GitHub branch or PR and specify the review scope.
+
+Example:
+
+```text
+@GitHub Review the homepage-v1 PR. Read AUREX-STATUS.md and CREATIVE-DIRECTION.md. Review only creative fidelity, conversion clarity, and mobile UX.
+```
+
+Do not ask for a full-site audit after every small change.
+
+### Revision
+
+Translate review findings into a focused revision brief. Claude fixes only what is required, verifies it, and updates status.
+
+See `FOUNDATION/COLLABORATION-PROTOCOL.md`.
+
+## Core project memory
+
+Use durable files so fresh sessions do not need old transcripts.
+
+Common artifacts:
 
 ```text
 PROJECT-BRIEF.md
@@ -111,15 +226,23 @@ SITE-ARCHITECTURE.md
 CREATIVE-DIRECTION.md
 DESIGN-SYSTEM.md
 ENGINEERING-PLAN.md
+AUREX-BRIEF.md
+AUREX-STATUS.md
 SEO-PLAN.md
 CONVERSION-PLAN.md
 QA-REPORT.md
 LAUNCH-CHECKLIST.md
 ```
 
-Not every project requires every file. Create documents when they preserve decisions that future sessions need.
+Not every project needs every file.
 
 ## Skill map
+
+### Efficiency and coordination
+
+- `/aurex-mode`
+- `/aurex-handoff`
+- `/aurex-website`
 
 ### Strategy and creative
 
@@ -146,29 +269,21 @@ Not every project requires every file. Create documents when they preserve decis
 - `/aurex-technical-qa`
 - `/aurex-launch`
 
-The master `/aurex-website` workflow should coordinate these instead of invoking all of them unnecessarily.
+The orchestrator should call only the skills needed for the current work.
 
-## Specialist agents
+## Specialist policy
 
-The OS includes specialists for:
+Specialists exist for research, creative direction, conversion, SEO, content, motion, frontend architecture, performance, accessibility, independent QA, and launch engineering.
 
-- research
-- creative direction
-- conversion
-- SEO
-- content
-- motion
-- frontend architecture
-- performance
-- accessibility
-- independent QA
-- launch engineering
+Before invoking one, define the exact question.
 
-Use agents when isolated deep work or an independent review improves the result. Keep cross-disciplinary synthesis in the main conversation.
+Prefer one focused specialist over overlapping specialists.
+
+Do not use agent teams by default.
 
 ## Claude hooks
 
-Aurex includes starter hook files under:
+Starter hook files live under:
 
 ```text
 starter/.claude/settings.json
@@ -177,24 +292,20 @@ starter/.aurex/hooks/
 
 ### Format-on-edit
 
-After Claude edits supported source files, the hook runs local Prettier only when Prettier already exists in the project's `node_modules`.
-
-It never calls `npx` to download a formatter unexpectedly.
+Runs local Prettier only when it already exists in the project. It never uses `npx` to download a formatter unexpectedly.
 
 ### Pre-push quality gate
 
-When Claude attempts `git push`, the hook inspects the client repo and runs configured scripts in this order when they exist:
+When Claude attempts `git push`, the hook runs configured scripts when they exist:
 
 1. typecheck
 2. lint
 3. test
 4. build
 
-If a check fails, the hook denies the push and returns the failure to Claude.
+A failure denies the push and returns the reason to Claude.
 
-Do not copy the starter settings over existing `.claude/settings.json`. Use `/aurex-project-setup` to merge it safely.
-
-After hook setup, use Claude Code `/hooks` to confirm the hooks are loaded.
+Use `/aurex-project-setup` to merge hooks safely with existing client configuration.
 
 ## Browser testing starter
 
@@ -204,22 +315,15 @@ Reusable Playwright examples live in:
 starter/quality/playwright/
 ```
 
-They include:
+They include desktop/mobile route smoke testing, console/page-error detection, and axe accessibility scanning.
 
-- representative route smoke testing
-- desktop and mobile Chromium projects
-- console/page-error detection
-- axe accessibility scanning
-
-Set representative routes with:
+Representative routes can be configured with:
 
 ```bash
 AUREX_TEST_ROUTES="/,/services,/about,/contact"
 ```
 
-Configure `PLAYWRIGHT_BASE_URL` for an already-running site or `AUREX_START_COMMAND` when the adapted Playwright config should start the app.
-
-The starter must be copied and adapted into the client repo before use.
+Adapt the starter to the real client repo before relying on it.
 
 ## CI starter
 
@@ -229,90 +333,50 @@ The npm GitHub Actions starter lives at:
 starter/.github/workflows/aurex-quality.yml
 ```
 
-It is intentionally not universal.
-
-`/aurex-project-setup` should adapt:
-
-- package manager
-- Node version
-- install command
-- actual scripts
-- browser-test setup
-- environment requirements
-
-Never commit a CI workflow that has not been run or reviewed against the real client repository.
+It is intentionally not universal. `/aurex-project-setup` should adapt package manager, Node version, install command, scripts, browser setup, and environment requirements.
 
 ## Human collaboration
 
-The default Aurex mode is approximately 50/50 collaboration.
+The default relationship is roughly 50/50.
 
-Expect human review at high-leverage gates such as:
+Human review belongs at high-leverage gates such as:
 
-1. discovery and strategy
-2. site architecture
-3. creative direction
-4. homepage structure and hero
-5. homepage approval
-6. strategically new page-category patterns
-7. final creative review
-8. launch
+- discovery/strategy
+- site architecture
+- creative direction
+- homepage structure and hero
+- homepage approval
+- strategically new page-category patterns
+- final creative review
+- launch
 
-Do not require approval for routine engineering choices inside an approved strategy unless the decision is expensive to reverse or changes the project materially.
+Routine implementation inside an approved direction should not require constant approval.
 
-## Build workflow after creative approval
+## Session reset discipline
 
-A typical engineering sequence is:
+Do not keep a huge Claude conversation alive only to preserve memory.
 
-```text
-/aurex-stack
-/aurex-project-setup
-create ENGINEERING-PLAN.md
-/aurex-engineering
-browser inspection
-/aurex-responsive
-/aurex-motion
-/aurex-form-qa
-/aurex-accessibility
-/aurex-performance
-/aurex-technical-qa
-/aurex-visual-qa
-/aurex-launch
-```
+Before starting fresh:
 
-The orchestrator decides which steps are needed and when.
+1. update durable approved artifacts
+2. update `AUREX-STATUS.md`
+3. record blockers and unverified areas
+4. state the next action
+
+Then a fresh session can continue from project state instead of chat history.
 
 ## Quality rule
 
+Efficiency does not mean skipping quality.
+
 A production build is not equivalent to an approved website.
 
-Before launch, Aurex should have evidence for:
+Before launch, have appropriate evidence for real browser behavior, responsive quality, conversion delivery, accessibility, crawlability, performance, analytics, security, and visual quality.
 
-- real browser behavior
-- responsive quality
-- primary conversion delivery
-- accessibility
-- crawlability and SEO controls
-- performance
-- analytics
-- security baseline
-- visual quality
-
-If something cannot be verified, record it as unverified instead of assuming it works.
+If something cannot be verified, label it unverified.
 
 ## OS improvement loop
 
-When a client project reveals a reusable lesson, propose a specific change back to Aurex Website OS.
+When a client project reveals a reusable lesson, propose a specific improvement back to Aurex Website OS.
 
-Useful lessons include:
-
-- repeated design anti-patterns
-- form failures
-- better source hierarchies
-- animation implementation problems
-- responsive edge cases
-- SEO migration mistakes
-- performance regressions
-- accessibility failures
-- stronger automation checks
-
-The system should become smarter from real projects without converging on one visual style.
+The system should become smarter from real projects while each client remains visually distinct.
