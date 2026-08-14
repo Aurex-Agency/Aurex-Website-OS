@@ -13,23 +13,25 @@ try {
 const filePath = input?.tool_input?.file_path
 if (!filePath) process.exit(0)
 
+const cwd = input.cwd || process.cwd()
+const targetPath = path.isAbsolute(filePath) ? filePath : path.resolve(cwd, filePath)
+
 const supported = new Set([
   '.js', '.jsx', '.ts', '.tsx', '.mjs', '.cjs',
   '.json', '.css', '.scss', '.md', '.mdx', '.html',
   '.yml', '.yaml',
 ])
 
-if (!supported.has(path.extname(filePath).toLowerCase())) process.exit(0)
-if (!fs.existsSync(filePath)) process.exit(0)
+if (!supported.has(path.extname(targetPath).toLowerCase())) process.exit(0)
+if (!fs.existsSync(targetPath)) process.exit(0)
 
-const cwd = input.cwd || process.cwd()
 const executable = process.platform === 'win32' ? 'prettier.cmd' : 'prettier'
 const prettier = path.join(cwd, 'node_modules', '.bin', executable)
 
 // Never invoke npx here. Hooks should not unexpectedly download packages.
 if (!fs.existsSync(prettier)) process.exit(0)
 
-const result = spawnSync(prettier, ['--write', filePath], {
+const result = spawnSync(prettier, ['--write', targetPath], {
   cwd,
   encoding: 'utf8',
   env: process.env,
@@ -38,7 +40,7 @@ const result = spawnSync(prettier, ['--write', filePath], {
 
 if (result.status !== 0) {
   const message = (result.stderr || result.stdout || 'Unknown Prettier error').trim()
-  process.stderr.write(`Aurex formatter hook could not format ${filePath}: ${message}\n`)
+  process.stderr.write(`Aurex formatter hook could not format ${targetPath}: ${message}\n`)
   process.exit(1)
 }
 
