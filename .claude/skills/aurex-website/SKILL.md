@@ -17,6 +17,8 @@ Read these foundation files before major decisions:
 - `FOUNDATION/AUREX-PRINCIPLES.md`
 - `FOUNDATION/PROJECT-WORKFLOW.md`
 - `FOUNDATION/CREATIVE-CONCEPT-METHOD.md`
+- `FOUNDATION/OUTPUT-STANDARD.md`
+- `FOUNDATION/QUALITY-SCORECARD.md` for major QA and approval decisions
 - `FOUNDATION/LEAD-CONVERSION-STANDARD.md` when lead generation is relevant
 - the active project brief and any approved strategy documents
 
@@ -41,6 +43,23 @@ Read these foundation files before major decisions:
 17. Post-launch learning
 
 Use the dedicated Aurex skills for each specialist stage instead of improvising a new process.
+
+## Specialist delegation
+
+Use agents when specialist work would benefit from independent context, deep research, or an unbiased second opinion.
+
+Good examples:
+
+- Research Director for broad evidence gathering and synthesis
+- Creative Director at major concept and visual approval gates
+- Conversion Strategist for important lead-flow decisions
+- SEO Strategist for architecture, migration, and material organic decisions
+- Content Strategist for messaging hierarchy and copy review
+- Motion Director for signature interactions
+- Frontend Architect for implementation risks and engineering choices
+- QA Reviewer for independent pre-approval review
+
+Do not delegate every task merely because an agent exists. Keep cross-disciplinary synthesis in the main project conversation.
 
 ## Collaboration behavior
 
@@ -69,14 +88,26 @@ Maintain clear project artifacts for major stages. Recommended documents include
 - `CREATIVE-DIRECTION.md`
 - `DESIGN-SYSTEM.md`
 - page specs as needed
+- `SEO-PLAN.md` where complexity warrants it
+- `CONVERSION-PLAN.md` where complexity warrants it
 - `QA-REPORT.md`
 - `LAUNCH-CHECKLIST.md`
+
+Use the templates in `templates/` when they improve consistency, but do not create documents that add process without preserving useful decisions.
+
+## Output quality
+
+Major strategy, research, audit, and approval outputs must follow `FOUNDATION/OUTPUT-STANDARD.md`.
+
+Lead with the recommendation. Prioritize findings. Distinguish facts from judgment. Explain important mechanisms and tradeoffs. Surface uncertainty honestly. Make the next action obvious.
 
 ## Quality control
 
 Do not equate completion with code generation.
 
 Before calling a major stage complete, verify the output against the approved business objective, conversion strategy, creative concept, responsive behavior, accessibility, SEO intent, performance implications, and actual browser experience.
+
+Use `FOUNDATION/QUALITY-SCORECARD.md` as an internal diagnostic framework during final review. A high average cannot compensate for a serious weakness in business clarity, conversion, accessibility, mobile, or technical correctness.
 
 When evidence is required, research current primary documentation or reputable research instead of relying on folklore or stale memory.
 
