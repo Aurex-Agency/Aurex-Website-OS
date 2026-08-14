@@ -18,6 +18,8 @@ Required inputs:
 - known competitors
 - known technical or platform constraints
 - desired launch timing
+- business-native creative raw material such as objects, materials, processes, terminology, history, location, and customer transformation
+- current lead flow and what happens after a lead converts
 
 Output: completed `PROJECT-BRIEF.md` draft.
 
@@ -33,6 +35,7 @@ Analyze:
 - audience segments
 - customer intent
 - strongest differentiators
+- customer transformation or emotional promise
 - objections
 - proof assets
 - competitive positioning
@@ -42,6 +45,7 @@ Analyze:
 - search intent and organic opportunities
 - local-search opportunities where relevant
 - likely conversion paths
+- visual and interaction ideas that emerge naturally from the business
 
 Separate facts from assumptions. Flag unknowns that materially affect strategy.
 
@@ -51,7 +55,7 @@ Human gate: review major findings and correct misunderstandings before creative 
 
 ## Phase 2: Positioning and conversion strategy
 
-Define how the website should persuade.
+Define how the website should persuade and how a visitor should become a lead, customer, patient, applicant, or other desired conversion.
 
 Establish:
 
@@ -66,10 +70,17 @@ Establish:
 - offer structure
 - trust strategy
 - page-level conversion roles
+- lead-capture pattern
+- minimum information required for the first conversion
+- alternative paths such as call, text, booking, or ecommerce
+- post-submit experience
+- tracking requirements
 
-Output: website strategy summary.
+Use `FOUNDATION/LEAD-CONVERSION-STANDARD.md` for lead-generation projects.
 
-Human collaboration: review the primary message and conversion strategy before visual exploration.
+Output: website strategy summary and initial conversion architecture.
+
+Human collaboration: review the primary message and any material conversion decisions before visual exploration.
 
 ## Phase 3: Site architecture and content map
 
@@ -94,11 +105,17 @@ Human gate: approve or adjust the site architecture before full content producti
 
 ## Phase 4: Creative direction
 
+Use `FOUNDATION/CREATIVE-CONCEPT-METHOD.md`.
+
+Do not begin with a trendy style or a preselected website aesthetic. Search the business for an ownable creative idea based on its customer outcome, brand, product or service, physical details, imagery, history, language, process, geography, and competitive context.
+
 Develop three meaningfully different creative directions unless the project clearly calls for a narrower exploration.
 
 Each direction should include:
 
 - concept name
+- business truth behind the concept
+- story or emotional idea
 - visual thesis
 - emotional tone
 - typography direction
@@ -109,6 +126,8 @@ Each direction should include:
 - motion personality and intensity
 - hero concept
 - section-transition approach
+- conversion integration
+- mobile implications
 - reasons the direction fits the business
 - risks or tradeoffs
 
@@ -136,6 +155,9 @@ Define:
 - motion tokens
 - section transition patterns
 - breakpoint behavior
+- constant design elements
+- signature creative moments
+- supporting creative moments
 
 Then create the homepage information architecture and section sequence.
 
@@ -152,6 +174,7 @@ Evaluate:
 - immediate message clarity
 - perceived quality
 - brand fit
+- connection to the approved creative concept
 - imagery
 - color balance
 - typography
@@ -181,6 +204,7 @@ Review:
 - section rhythm
 - imagery needs
 - transition quality
+- concept continuity
 - accessibility
 - responsive behavior
 - performance implications
@@ -237,11 +261,11 @@ For each bundle:
 1. define the role of the pages
 2. establish shared template logic
 3. build representative pages
-4. review content, conversion, SEO, and UX
-5. get human approval
-6. complete the bundle
+4. review content, conversion, SEO, UX, and creative continuity
+5. get human approval when the page pattern is strategically or visually new
+6. complete the bundle autonomously once the pattern is approved
 
-Human gate: approve each meaningful bundle before moving to the next when the visual or strategic pattern is new.
+Human gate: approve each meaningful new bundle pattern rather than reviewing every routine page individually.
 
 ## Phase 9: Content, SEO, and organic-depth pass
 
@@ -261,28 +285,33 @@ Verify:
 - indexability/canonical decisions are correct
 - sitemap and robots behavior are intentional
 - local signals are accurate where applicable
+- user-facing copy avoids formulaic AI patterns and prohibited dash punctuation
 
 Research current guidance for material SEO decisions rather than relying on outdated memory.
 
 ## Phase 10: Conversion review
 
-Review the entire website as a conversion system.
+Review the entire website as a conversion system using `FOUNDATION/LEAD-CONVERSION-STANDARD.md` where relevant.
 
 Assess:
 
 - value proposition clarity
 - CTA hierarchy
 - form friction
-- trust and proof
+- whether every requested field is justified
+- whether single-step or multi-step interaction fits the job
+- trust and proof near the decision
 - objection coverage
 - offer clarity
 - contact accessibility
 - mobile CTA access
 - page-to-page conversion continuity
 - message match
+- post-submit experience
+- lead delivery
 - conversion tracking requirements
 
-Do not confuse more CTAs with better CRO.
+Do not confuse more CTAs with better CRO. Do not call a pattern high converting without evidence.
 
 ## Phase 11: Motion and interaction pass
 
@@ -299,6 +328,7 @@ Review:
 - scroll-linked motion
 - mobile motion
 - reduced-motion behavior
+- connection between animation and the approved creative concept
 
 Default to motion intensity 3-7 depending on the brand.
 
@@ -353,6 +383,7 @@ Verify as appropriate:
 - consent requirements where applicable
 - forms and integrations
 - security-sensitive configuration
+- complete end-to-end lead delivery
 
 ## Phase 14: Final creative-director review
 
@@ -361,6 +392,7 @@ Review the website with fresh eyes.
 Ask:
 
 - Does this look like it belongs uniquely to this business?
+- Is there an ownable idea connecting the experience to the business?
 - Is the main thing still the main thing?
 - Does every major page have a purpose?
 - Does the site feel premium without feeling self-indulgent?
@@ -369,6 +401,7 @@ Ask:
 - Are there obvious AI-generated patterns?
 - Are repeated templates becoming visually monotonous?
 - Is the conversion path natural and clear?
+- Are forms easy, credible, and appropriately short?
 - Are weak client assets exposed honestly through placeholders/recommendations rather than hidden with generic design?
 - Is mobile equally intentional?
 - Would we confidently put the Aurex name on this project?
@@ -402,7 +435,10 @@ After meaningful traffic accumulates, review available evidence:
 - user behavior
 - search visibility
 - landing-page performance
-- form completion
+- form starts and completion
+- form abandonment when measurable
+- lead quality
+- booked outcomes where available
 - call/contact patterns
 - page engagement
 - technical issues
@@ -413,7 +449,9 @@ If a lesson is systemic, propose an update to Aurex Website OS.
 
 ## Collaboration principle
 
-The human creative lead should be involved frequently enough to prevent expensive wrong turns, but not so frequently that the system becomes a sequence of tiny approvals.
+Aurex operates on a roughly 50/50 collaboration model.
+
+The human creative lead should make high-leverage decisions. The system should eliminate as much routine work as possible between those decisions.
 
 Default human gates:
 
@@ -424,8 +462,22 @@ Default human gates:
 5. homepage structure
 6. hero/visual proof
 7. full homepage
-8. each new page-category pattern
+8. each strategically or visually new page-category pattern
 9. final creative review
 10. launch
+
+Do not ask for approval on routine implementation details when the approved strategy already provides a clear answer.
+
+Escalate a decision when it is:
+
+- highly subjective
+- expensive to reverse
+- strategically material
+- based on uncertain or conflicting evidence
+- likely to change the approved creative language
+- likely to change the conversion strategy materially
+- dependent on business knowledge not available to the system
+
+When escalating, bring a recommendation, alternatives, and tradeoffs. Do not hand the problem back to the human as an empty question.
 
 The system may compress gates for simple projects or expand them for high-risk, high-budget, or unusually complex projects.
