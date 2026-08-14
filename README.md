@@ -6,81 +6,113 @@ The goal is not one recognizable Aurex visual style. The goal is a repeatable st
 
 ## Core outcome
 
-Every Aurex website must do two things at the same time:
+Every Aurex website should:
 
 1. Help the business grow through stronger visibility, trust, conversion, and measurement.
-2. Give the visitor a distinctive, polished experience that feels intentionally designed for that business.
+2. Give the visitor a distinctive, polished experience intentionally designed for that business.
 
 A beautiful website that does not convert has failed the business.
 
-A converting website that feels cheap, generic, confusing, slow, inaccessible, or fragile has also left major value on the table.
+A converting website that feels generic, confusing, slow, inaccessible, or fragile has also left value on the table.
 
 Aurex aims for both.
 
-## Aurex design character
+## Creative philosophy
 
-Aurex websites should generally feel:
+Aurex does not choose a trendy style and force the client into it.
 
-- premium
-- modern
-- clean without becoming sterile
-- visually intentional
-- image-led when strong imagery improves the story
-- moderately interactive
-- unique to the client
-- conversion-focused
-- easy to understand
-- structured for multi-page organic visibility
+The system looks for an ownable creative thread in the business itself: customer outcome, identity, products, services, materials, physical environment, process, language, history, geography, culture, and imagery.
 
-The system must avoid defaulting to empty white sections, generic cards, stock SaaS layouts, arbitrary gradients, library-default styling, or random motion.
+That thread can influence layout, imagery, motion, transitions, surfaces, typography, and copy, but it must strengthen the business story and conversion path rather than become a gimmick.
 
-Color, imagery, typography, layout, depth, movement, content, and conversion should work together to create a client-specific visual world.
+## Conversion and organic visibility
 
-## Business-native creative direction
+Conversion is the primary commercial driver. Aurex designs CTA hierarchy, proof, trust, lead capture, post-conversion behavior, and measurement as part of the product experience.
 
-Aurex does not select a trendy style first and force the client into it.
+Organic visibility is designed into site architecture, content depth, semantic rendering, internal linking, local relevance where appropriate, performance, accessibility, and technical SEO.
 
-The system researches the business, audience, logo, customer outcome, physical environment, products, services, processes, terminology, history, imagery, geography, and competitive category to find an ownable creative thread.
+Material SEO and CRO recommendations should be based on evidence rather than folklore.
 
-That thread may influence layout, imagery, motion, transitions, surfaces, copy, or interaction. The concept must help tell the business story and support conversion rather than becoming a gimmick.
+## Proportional operating modes
 
-## Conversion is the primary business driver
+Aurex now uses three operating modes so quality does not require maximum model usage on every task.
 
-Aurex websites are business assets, not digital brochures.
+### QUICK
 
-Every project should establish:
+Small, bounded, low-risk changes inside an approved strategy or design system.
 
-- primary conversion
-- secondary conversions
-- visitor intent
-- objections
-- proof requirements
-- CTA hierarchy
-- lead-capture experience
-- post-conversion behavior
-- analytics and measurement
+Default: one Claude session, directly relevant files, no broad research, no specialist by default, targeted verification.
 
-Forms and lead flows are treated as designed product interactions and are tested through real delivery, error, mobile, accessibility, and tracking paths.
+### STANDARD
 
-## Organic visibility is part of the product
+The normal mode for meaningful production work such as a new page pattern, section redesign, lead flow, approved homepage implementation, or focused audit.
 
-Aurex sites should support discoverability and long-term organic growth through useful information architecture, page depth, technical SEO, local relevance where appropriate, semantic rendering, internal linking, performance, accessibility, and content quality.
+Default: primary session, relevant skills, zero to two focused specialists when useful, browser verification.
 
-Material SEO decisions should be based on evidence and current guidance rather than folklore, keyword stuffing, or arbitrary tool scores.
+### DEEP
 
-## Human + AI collaboration
+For new websites, major redesigns, site architecture, migrations, major conversion systems, or high-stakes final audits.
 
-Aurex Website OS uses a roughly 50/50 collaboration model.
+DEEP can use broader research and multiple specialists, but only when each has a defined question and deliverable.
 
-The system should automate research, production, refinement, technical work, and QA where doing so saves time. The human creative lead remains involved at high-leverage strategic and creative decisions.
+DEEP is not the default.
 
-Once a direction is approved, routine execution should continue autonomously until another material decision is reached.
+See `FOUNDATION/EFFICIENCY-STANDARD.md` and `/aurex-mode`.
 
-## Specialist operating brain
+## ChatGPT + Claude collaboration
 
-### Strategy and creative skills
+Aurex is designed around complementary roles:
+
+```text
+Human creative lead
+        ↓
+ChatGPT
+strategy + research + creative review + prioritization
+        ↓
+GitHub
+AUREX-BRIEF.md + approved project artifacts
+        ↓
+Claude Code
+local implementation + browser + tests
+        ↓
+GitHub
+AUREX-STATUS.md + branch/PR
+        ↓
+ChatGPT
+focused GitHub review
+        ↓
+Claude Code
+targeted revision + verification
+```
+
+GitHub is shared state. Long chat transcripts are not.
+
+Use:
+
+- `templates/AUREX-BRIEF.md` for focused implementation handoffs
+- `templates/AUREX-STATUS.md` for current project state
+- `templates/AUREX-REVIEW.md` for prioritized review findings
+- `FOUNDATION/COLLABORATION-PROTOCOL.md` for the full handoff model
+- `COLLABORATION-QUICKSTART.md` for the simple human workflow
+
+## Human + AI relationship
+
+Aurex uses a roughly 50/50 collaboration model.
+
+The system automates research, implementation, refinement, technical work, and QA where useful. The human creative lead remains involved at high-leverage strategic and creative decisions.
+
+Routine execution inside an approved direction should continue autonomously until another material decision is reached.
+
+## Specialist skills
+
+### Coordination and efficiency
 
 - `/aurex-website`
+- `/aurex-mode`
+- `/aurex-handoff`
+
+### Strategy and creative
+
 - `/aurex-discovery`
 - `/aurex-research`
 - `/aurex-site-architecture`
@@ -93,7 +125,7 @@ Once a direction is approved, routine execution should continue autonomously unt
 - `/aurex-seo`
 - `/aurex-visual-qa`
 
-### Engineering and production skills
+### Engineering and production
 
 - `/aurex-stack`
 - `/aurex-project-setup`
@@ -104,7 +136,7 @@ Once a direction is approved, routine execution should continue autonomously unt
 - `/aurex-technical-qa`
 - `/aurex-launch`
 
-### Specialist agents
+## Specialist agents
 
 - Research Director
 - Creative Director
@@ -118,11 +150,11 @@ Once a direction is approved, routine execution should continue autonomously unt
 - QA Reviewer
 - Launch Engineer
 
-Specialists improve judgment and context management. They should not create bureaucracy or fragment the overall website strategy.
+Specialists improve judgment and context management. They should not create bureaucracy. Prefer one focused specialist over overlapping agents. Agent teams are not the default.
 
 ## Engineering default
 
-For a new Aurex SMB marketing site without unusual constraints, the default starting point is:
+For a new Aurex SMB marketing site without unusual constraints, the starting point is generally:
 
 - Next.js App Router
 - TypeScript
@@ -130,64 +162,53 @@ For a new Aurex SMB marketing site without unusual constraints, the default star
 - React Server Components by default
 - Motion for most animation
 - GSAP/ScrollTrigger only for advanced choreography
-- Radix/shadcn primitives only when useful, with custom visual styling
-- Vercel by default unless the client requires another platform
+- Radix/shadcn primitives only when useful, with custom styling
+- Vercel unless the project requires another platform
 
-This is a default, not a mandatory answer. Existing sound stacks should normally be preserved.
+This is a default, not doctrine. Sound existing stacks should normally be preserved.
 
 ## Quality automation
 
-Phase 3 adds a reusable engineering automation layer:
+The production layer includes:
 
-- path-scoped Claude rules for frontend architecture, design implementation, media, motion, SEO rendering, accessibility, forms, analytics, security, and verification
-- project setup workflow that adapts the OS to the actual client repo
-- optional format-on-edit hook when local Prettier exists
-- pre-push quality hook that blocks Claude-driven `git push` when configured typecheck, lint, test, or build scripts fail
-- Playwright smoke-test starter
-- Playwright + axe accessibility-test starter
-- GitHub Actions quality starter that must be adapted to the actual package manager and scripts
-- durable engineering and launch templates
+- path-scoped Claude rules
+- project setup workflow
+- format-on-edit starter using local Prettier only
+- pre-push quality gate for typecheck, lint, test, and build scripts
+- Playwright desktop/mobile smoke tests
+- Playwright + axe accessibility starter
+- adaptable GitHub Actions starter
+- engineering and launch templates
 
 Automation catches repeatable failures. It does not replace browser review, creative judgment, or manual accessibility testing.
 
 ## Production quality principles
 
-Aurex expects:
-
-- server-first rendering and narrow client boundaries
-- optimized media and fonts
-- evidence-based Core Web Vitals work
-- WCAG 2.2 AA as the normal accessibility target
-- secure handling of public inputs and secrets
-- real form delivery verification
-- meaningful analytics events
-- production build verification
-- responsive browser QA
-- independent visual QA
-- controlled launch and post-launch checks
-
-Current Core Web Vitals good targets are LCP <= 2.5s, INP <= 200ms, and CLS <= 0.1 at the 75th percentile. Field data is preferred when available.
+Aurex expects server-first rendering, optimized media/fonts, accessibility, secure public inputs, real form delivery verification, meaningful analytics, production build verification, responsive browser QA, performance review, controlled launch, and independent visual QA.
 
 ## Repository structure
 
-- `CLAUDE.md` - persistent operating constitution
-- `FOUNDATION/` - principles and quality standards
-- `.claude/skills/` - reusable operating workflows
-- `.claude/agents/` - specialist reviewers and operators
-- `.claude/rules/` - scoped implementation rules
-- `templates/` - durable project artifacts
-- `starter/` - automation and test starters copied/adapted into client repos
+- `CLAUDE.md` - concise persistent constitution
+- `FOUNDATION/` - strategy, quality, efficiency, and collaboration standards
+- `.claude/skills/` - reusable workflows
+- `.claude/agents/` - specialist reviewers/operators
+- `.claude/rules/` - scoped implementation and efficiency rules
+- `templates/` - durable project and handoff artifacts
+- `starter/` - automation and test starters for client repos
 - `references/` - evolving research and patterns
-- `USAGE.md` - instructions for using the OS across client repositories
+- `COLLABORATION-QUICKSTART.md` - simple ChatGPT/Claude workflow
+- `USAGE.md` - full operating instructions
 
 ## Current stage
 
-**Phase 3: Engineering and automation layer built**
+**Phase 3.5: Efficiency and collaboration protocol built**
 
 Phase 1 established the Aurex philosophy and workflow.
 
 Phase 2 created the specialist strategy and creative brain.
 
-Phase 3 connects that brain to a production engineering system with stack selection, implementation standards, deterministic quality gates, browser testing, accessibility, performance, security, analytics, technical QA, and controlled launch procedures.
+Phase 3 connected that brain to a production engineering, QA, automation, and launch system.
 
-The next major evolution should focus on packaging, one-command project bootstrap, deeper visual regression/browser automation, reusable integration adapters, and learning from real Aurex client projects without allowing the system to converge on one visual aesthetic.
+Phase 3.5 adds proportional QUICK/STANDARD/DEEP operating modes, specialist cost discipline, session/context rules, durable ChatGPT-to-Claude handoffs, project status checkpoints, and a GitHub-centered review loop.
+
+The next priority is real-world battle testing on an existing Aurex website so the system can learn from actual implementation behavior rather than continuing to grow only in theory.
