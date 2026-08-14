@@ -34,6 +34,14 @@ Aurex websites should generally feel:
 
 The system must avoid defaulting to large amounts of empty white space, generic card grids, stock SaaS patterns, or arbitrary motion. Color, imagery, typography, layout, depth, and movement should work together to create an intentional visual world for each client.
 
+## Business-native creative direction
+
+Aurex does not select a trendy style first and force the client into it.
+
+The system researches the business, audience, logo, customer outcome, physical environment, products, services, processes, terminology, history, imagery, geography, and competitive category to find an ownable creative thread.
+
+That thread may influence layout, imagery, motion, transitions, surfaces, copy, or interaction. The concept must help tell the client's story and support conversion rather than becoming a decorative gimmick.
+
 ## Conversion is the primary business driver
 
 Aurex websites are business assets, not digital brochures.
@@ -48,9 +56,13 @@ Every project must establish:
 - proof strategy
 - CTA hierarchy
 - page-level conversion goals
+- lead-capture experience
+- post-conversion behavior
 - analytics and measurement requirements
 
 Conversion architecture should be present throughout the experience without making the site feel aggressive or repetitive.
+
+Forms and lead flows are treated as designed product interactions. The system should reduce unnecessary friction, choose the appropriate form pattern for the job, and test lead delivery end to end.
 
 ## Organic visibility is part of the product
 
@@ -60,32 +72,37 @@ SEO decisions should be based on evidence and current best practices rather than
 
 ## Human + AI collaboration
 
-Aurex Website OS is designed for collaboration between the human creative lead and AI specialists.
+Aurex Website OS uses a roughly 50/50 collaboration model.
 
-The system should automate analysis and production where doing so saves time, but important creative and strategic decisions remain collaborative. The standard workflow includes deliberate approval gates before the system moves too far in the wrong direction.
+The system should automate research, analysis, production, refinement, and QA where doing so saves time. The human creative lead stays involved at high-leverage strategic and creative decisions.
+
+Once a direction is approved, the system should handle routine implementation autonomously rather than requesting approval for every small decision.
 
 ## Repository structure
 
-This repository will grow in layers:
-
-- `CLAUDE.md` - persistent operating principles for Claude Code
-- `FOUNDATION/` - Aurex philosophy, standards, and workflow
-- `templates/` - reusable project documents
-- `.claude/rules/` - scoped persistent implementation rules
-- `.claude/skills/` - reusable specialist workflows
-- `.claude/agents/` - specialist reviewers and operators
+- `CLAUDE.md` - persistent operating constitution for Claude Code
+- `FOUNDATION/AUREX-PRINCIPLES.md` - core Aurex website principles
+- `FOUNDATION/CREATIVE-CONCEPT-METHOD.md` - method for discovering business-native creative ideas
+- `FOUNDATION/LEAD-CONVERSION-STANDARD.md` - lead capture and form UX standard
+- `FOUNDATION/PROJECT-WORKFLOW.md` - full collaborative project lifecycle
+- `templates/PROJECT-BRIEF.md` - standard intake and strategy brief
+- `.claude/rules/` - scoped persistent implementation rules, added in later phases
+- `.claude/skills/` - reusable specialist workflows, added in later phases
+- `.claude/agents/` - specialist reviewers and operators, added in later phases
 - `references/` - evolving research, patterns, anti-patterns, and inspiration knowledge
 
 ## Current stage
 
 **Phase 1: Foundation**
 
-This phase defines:
+Phase 1 establishes:
 
 - the Aurex principles
 - the persistent Claude constitution
+- the business-native creative concept method
+- the lead conversion standard
 - the project workflow
 - collaboration and approval gates
 - the client project brief
 
-Later phases will add specialist skills, agents, research frameworks, SEO and conversion systems, design and motion standards, QA scorecards, technical standards, launch systems, and continuous-improvement processes.
+The next phase adds the specialist operating brain: discovery, research, art direction, page design, conversion, SEO, motion, responsive design, visual QA, and specialist agents.
