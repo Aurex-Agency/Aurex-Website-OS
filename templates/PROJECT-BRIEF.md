@@ -20,6 +20,10 @@ Use this template at the beginning of every website project. The goal is to crea
 
 **What is changing or prompting the website project now?**
 
+**What objects, materials, tools, processes, terminology, places, or physical details are strongly associated with the business?**
+
+**What parts of the company's history, founder story, location, or culture might be visually or emotionally meaningful?**
+
 ## 2. Business objective
 
 **Primary website objective:**
@@ -44,11 +48,15 @@ Examples: generate qualified leads, drive calls, increase appointments, sell pro
 
 **What problem or desire brings visitors to the site?**
 
+**What does the customer hope becomes easier, safer, clearer, better, faster, more enjoyable, or more valuable after choosing the business?**
+
 **What do they care about most when choosing a provider/product?**
 
 **What are their biggest objections, fears, or uncertainties?**
 
 **What level of awareness do typical visitors have before arriving?**
+
+**What language do real customers use to describe the problem or desired outcome?**
 
 ## 4. Positioning
 
@@ -66,6 +74,10 @@ Examples: generate qualified leads, drive calls, increase appointments, sell pro
 
 Examples: premium, local, bold, warm, technical, trustworthy, energetic, refined, rugged, approachable.
 
+**What is the emotional promise of the business?**
+
+Examples: confusion to clarity, risk to confidence, damaged to protected, complicated to simple, empty to complete.
+
 ## 5. Competitors and alternatives
 
 **Known direct competitors:**
@@ -77,6 +89,8 @@ Examples: premium, local, bold, warm, technical, trustworthy, energetic, refined
 **Competitor websites the client dislikes:**
 
 **What seems visually or strategically overused in this market?**
+
+**What category conventions are useful and should remain familiar?**
 
 **What opportunity might Aurex use to differentiate the experience?**
 
@@ -95,6 +109,8 @@ Examples: premium, local, bold, warm, technical, trustworthy, energetic, refined
 **Elements that must remain:**
 
 **Elements that may be reinvented:**
+
+**Does the logo, mark, typography, packaging, building, product, or physical environment contain shapes or ideas that could inspire the digital experience?**
 
 ## 7. Content and proof
 
@@ -116,6 +132,8 @@ Examples: premium, local, bold, warm, technical, trustworthy, energetic, refined
 
 **FAQs / common sales questions:**
 
+**Strongest proof available for the primary conversion:**
+
 ## 8. Photography, video, and visual assets
 
 **Professional photography available?**
@@ -133,6 +151,8 @@ Examples: premium, local, bold, warm, technical, trustworthy, energetic, refined
 **Can Aurex produce new photography/video?**
 
 **Known asset quality issues:**
+
+**What visual moments would tell the business story better than copy alone?**
 
 ### Required asset recommendations
 
@@ -212,6 +232,32 @@ Research should validate search opportunities rather than accepting guessed keyw
 
 **What happens after a conversion?**
 
+### Primary lead flow
+
+**What is the minimum information required to respond to the lead?**
+
+**What information is useful for qualification but could be collected later?**
+
+**What information is currently requested only because the business would like to know it?**
+
+**Is the request simple enough for a compact single-step form?**
+
+**Would progressive multi-step questions genuinely make a complex request easier?**
+
+**What should the visitor expect after submitting?**
+
+**Expected response time:**
+
+**What reassurance could reduce hesitation near the form?**
+
+**Alternative conversion paths such as call, SMS, booking, or visit:**
+
+**Known spam or lead-quality concerns:**
+
+### Form instrumentation
+
+Track the steps necessary to understand whether the flow is working. Depending on scope, this may include form view, form start, step progression, abandonment, submission, qualified lead, booked appointment, and downstream outcome.
+
 ## 12. Analytics and integrations
 
 **GA4:**
@@ -264,7 +310,9 @@ Research should validate search opportunities rather than accepting guessed keyw
 
 **Performance concerns:**
 
-## 14. Creative preferences
+## 14. Creative raw material
+
+This section exists to help Aurex discover a concept from the business instead of applying a preselected aesthetic.
 
 **Desired feel:**
 
@@ -286,6 +334,16 @@ For each reference, document what is actually useful rather than saying only tha
 **Interaction preferences:**
 
 **Things the client explicitly dislikes:**
+
+**Potential business-native visual ideas:**
+
+List possible metaphors, objects, transformations, shapes, materials, outcomes, or story ideas discovered during intake. Do not treat these as approved directions yet.
+
+- 
+
+**Which ideas feel genuinely specific to this business?**
+
+**Which ideas risk becoming gimmicks?**
 
 ## 15. Constraints
 
@@ -323,8 +381,36 @@ Answer:
 - how design and content can create an advantage
 - what the biggest conversion opportunity appears to be
 - what the biggest organic visibility opportunity appears to be
+- what business-native creative territory may be worth exploring
 
-## 18. Brief approval
+## 18. Collaboration profile
+
+**Default mode:** 50/50 collaborative
+
+The system should execute routine work autonomously while surfacing high-leverage creative, strategic, and business decisions.
+
+**Areas where the human creative lead wants final judgment:**
+
+- creative direction
+- major homepage concept
+- new page-category visual patterns
+- major conversion changes
+- final creative review
+
+**Areas the system may normally handle autonomously once direction is approved:**
+
+- implementation details
+- responsive refinements
+- component engineering
+- routine SEO implementation
+- accessibility corrections
+- technical QA
+- content consistency
+- motion polish within the approved language
+
+Adjust this profile when project risk or complexity requires it.
+
+## 19. Brief approval
 
 **Brief status:** Draft / Ready for discovery / Approved
 
