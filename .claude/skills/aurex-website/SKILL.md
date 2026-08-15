@@ -1,6 +1,6 @@
 ---
 name: aurex-website
-description: Orchestrates a complete Aurex website project while matching process depth to the task. Use when starting, continuing, or coordinating client website work.
+description: Orchestrates a complete Aurex website project while matching process depth, model class, specialist scope, and verification to the task. Use when starting, continuing, or coordinating client website work.
 disable-model-invocation: true
 ---
 
@@ -8,23 +8,39 @@ disable-model-invocation: true
 
 Use this skill as the top-level operating workflow for Aurex website work.
 
-## First decision: choose the operating mode
+## First decision: route effort before expanding context
 
-Before expanding context or invoking specialists, read `FOUNDATION/EFFICIENCY-STANDARD.md` and choose the smallest mode that can reliably produce an excellent result.
+Before broad research, reading many files, or invoking specialists, choose both:
 
-Use `/aurex-mode` when the correct mode is not obvious.
+1. operating mode: QUICK / STANDARD / DEEP
+2. model class: FAST / STANDARD / PREMIUM
+
+Use:
+
+- `FOUNDATION/EFFICIENCY-STANDARD.md`
+- `FOUNDATION/MODEL-ROUTING-STANDARD.md`
+- `/aurex-mode` when process depth is unclear
+- `/aurex-route` when model, risk, context, or specialist routing matters
+
+Use the smallest combination that can reliably produce an excellent result.
+
+Do not equate an important project with an expensive current task.
+
+## Operating modes
 
 ### QUICK
 
 For bounded, low-risk changes inside approved strategy and design language.
 
-Default: primary session, directly relevant files, no broad research, no specialist by default, targeted verification.
+Default: FAST model class when practical, directly relevant files, no broad research, no specialist by default, targeted verification.
+
+Escalate to STANDARD when the task becomes ambiguous or materially affects user/business outcomes.
 
 ### STANDARD
 
 For meaningful page, feature, conversion, design, or content work.
 
-Default: primary session, relevant skills, zero to two focused specialists when useful, browser verification, durable artifact updates when decisions change.
+Default: STANDARD model class, relevant skills, zero to two focused specialists when useful, browser verification, durable artifact updates when decisions change.
 
 STANDARD is the normal default for day-to-day production work.
 
@@ -32,9 +48,29 @@ STANDARD is the normal default for day-to-day production work.
 
 For new websites, major redesigns, architecture or migration decisions, major conversion systems, or final high-stakes reviews.
 
+DEEP is mixed-model by design. Use STANDARD for evidence gathering and implementation where sufficient. Reserve PREMIUM for high-leverage synthesis, high-risk decisions, difficult escalation, or final executive judgment.
+
 Use multiple specialists only when each has a distinct question and deliverable.
 
-Do not use DEEP merely because the project is important while the current task is small.
+Do not use DEEP merely because specialists exist.
+
+## Model routing
+
+Route using both reasoning difficulty and consequence of error.
+
+General defaults:
+
+- low difficulty + low risk -> FAST
+- medium difficulty + low/medium risk -> STANDARD
+- high difficulty + medium risk -> STANDARD first, then focused escalation
+- medium difficulty + high risk -> PREMIUM or premium review
+- high difficulty + high risk -> PREMIUM
+
+Before escalating, gather evidence and create a compressed escalation brief. Do not send an entire transcript or reread the whole project.
+
+For ambiguous technical work, two focused attempts with meaningfully different hypotheses are normally enough before reassessing the route.
+
+If a cheaper model creates so much rework that total effort rises, escalate. Optimize total quality and effort, not nominal per-call cost.
 
 ## Shared foundation
 
@@ -46,6 +82,7 @@ Common references include:
 - `FOUNDATION/PROJECT-WORKFLOW.md`
 - `FOUNDATION/CREATIVE-CONCEPT-METHOD.md`
 - `FOUNDATION/EFFICIENCY-STANDARD.md`
+- `FOUNDATION/MODEL-ROUTING-STANDARD.md`
 - `FOUNDATION/COLLABORATION-PROTOCOL.md`
 - `FOUNDATION/OUTPUT-STANDARD.md`
 - `FOUNDATION/QUALITY-SCORECARD.md`
@@ -82,13 +119,14 @@ DEEP new-site work normally moves through:
 18. Launch readiness and launch
 19. Post-launch measurement and learning
 
-QUICK and STANDARD tasks should not replay this full sequence. Enter at the relevant stage and perform only the process required for the current work unit.
+QUICK and STANDARD tasks should not replay this sequence. Enter at the relevant stage and perform only what the work unit requires.
 
 ## Specialist skills
 
 Use only the skills relevant to the task:
 
 - `/aurex-mode`
+- `/aurex-route`
 - `/aurex-handoff`
 - `/aurex-discovery`
 - `/aurex-research`
@@ -114,19 +152,19 @@ Use only the skills relevant to the task:
 
 Before invoking an agent, define the exact question and expected output.
 
-Useful specialists include:
+Default model-class guidance:
 
-- Research Director for broad evidence gathering
-- Creative Director for major concept and visual judgment
-- Conversion Strategist for material lead-flow decisions
-- SEO Strategist for architecture, migration, and material organic decisions
-- Content Strategist for messaging hierarchy and copy review
-- Motion Director for signature interactions
-- Frontend Architect for implementation risks and architecture choices
-- Performance Engineer for Core Web Vitals and runtime/media cost
-- Accessibility Reviewer for WCAG 2.2 AA and manual interaction review
-- QA Reviewer for independent pre-approval review
-- Launch Engineer for production migration and release verification
+- Research Director: STANDARD
+- Creative Director: PREMIUM for major creative judgment
+- Conversion Strategist: STANDARD, PREMIUM when stakes/uncertainty are high
+- SEO Strategist: STANDARD
+- Content Strategist: STANDARD
+- Motion Director: STANDARD
+- Frontend Architect: STANDARD
+- Performance Engineer: STANDARD
+- Accessibility Reviewer: STANDARD
+- QA Reviewer: STANDARD
+- Launch Engineer: STANDARD, PREMIUM review when production risk is high
 
 Do not delegate every task because agents exist. Prefer one focused specialist over overlapping specialists. Do not use agent teams by default.
 
@@ -139,6 +177,7 @@ Use:
 - `AUREX-BRIEF.md` for focused implementation assignments
 - `AUREX-STATUS.md` for current project state and handoff
 - `AUREX-REVIEW.md` for focused review findings
+- `AUREX-ROUTING.md` only when a meaningful routing decision should survive the session or be evaluated later
 
 Do not copy whole chat transcripts into project context.
 
@@ -163,7 +202,7 @@ Do not ask for approval on routine implementation details.
 At the start of a session:
 
 1. read `AUREX-STATUS.md` when present
-2. read only the approved artifacts relevant to the current task
+2. read only approved artifacts relevant to the current task
 3. inspect only the source files necessary to understand the work
 4. do not restart discovery or repeat settled research without a reason
 
@@ -188,15 +227,15 @@ Before clearing or ending a long session, preserve durable decisions and update 
 
 ## Engineering behavior
 
-Before major implementation, validate the stack and project quality setup when relevant. During implementation, preserve the approved creative language, server-first rendering, accessibility, media responsibility, conversion delivery, and measurement.
+Before major implementation, validate the stack and project quality setup when relevant. During implementation, preserve approved creative language, server-first rendering, accessibility, media responsibility, conversion delivery, and measurement.
 
 Use browser inspection repeatedly for user-facing work.
 
 ## Verification depth
 
-Match verification to the operating mode and risk.
+Match verification to mode and risk.
 
-QUICK: targeted checks for the changed behavior.
+QUICK: targeted checks for changed behavior.
 
 STANDARD: browser inspection, relevant tests, responsive review, and affected conversion/accessibility checks.
 
@@ -222,6 +261,6 @@ Lead with the recommendation. Prioritize. Distinguish facts from judgment. Expla
 
 If the site is generic, weakly branded, poorly converted, inaccessible, slow, insecure, difficult to crawl, or technically fragile, continue iterating.
 
-At the same time, do not spend DEEP-mode effort on a bounded task that is already understood.
+At the same time, do not spend PREMIUM or DEEP-mode effort on bounded work that is already understood.
 
-Excellent work is both high quality and proportionate.
+Excellent work is high quality, proportionate, and economically intelligent.
