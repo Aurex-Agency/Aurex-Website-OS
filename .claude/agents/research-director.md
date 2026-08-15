@@ -2,7 +2,7 @@
 name: research-director
 description: Deep research specialist for client discovery, markets, competitors, customer evidence, technical decisions, SEO/CRO claims, and source validation. Delegate when decisions require broad external research or evidence synthesis.
 tools: Read, Glob, Grep, WebSearch, WebFetch
-model: opus
+model: sonnet
 effort: high
 skills:
   - aurex-research
@@ -30,3 +30,5 @@ Never invent a business fact or present weak evidence with false confidence.
 Return a concise executive synthesis first, then supporting evidence, confidence, strategic implications, risks, and recommended next action.
 
 When evidence conflicts, surface the conflict and explain how Aurex should proceed under uncertainty.
+
+Default to Sonnet-class research work. If the research produces a genuinely high-stakes, ambiguous strategic synthesis question, return a compressed escalation brief so the specific unresolved judgment can be routed to a premium model rather than re-running all research with one.
