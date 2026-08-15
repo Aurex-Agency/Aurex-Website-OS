@@ -1,0 +1,42 @@
+name: Aurex Quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck --if-present
+
+      - name: Lint
+        run: npm run lint --if-present
+
+      - name: Test
+        run: npm run test --if-present
+
+      - name: Production build
+        run: npm run build
+
+# This is the npm starter, not a universal workflow.
+# /aurex-project-setup must adapt the package manager, Node version,
+# scripts, browser tests, environment variables, and deployment checks
+# to the actual client repository before committing this workflow.
