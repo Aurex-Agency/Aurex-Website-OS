@@ -347,10 +347,32 @@ Human review belongs at high-leverage gates such as:
 - homepage structure and hero
 - homepage approval
 - strategically new page-category patterns
+- dedicated mobile art-direction pass
+- mobile visual approval
 - final creative review
 - launch
 
 Routine implementation inside an approved direction should not require constant approval.
+
+## Desktop to mobile approval gate
+
+Desktop visual approval and mobile visual approval are separate gates. Technically responsive does not mean creatively approved on mobile.
+
+The canonical sequence for any meaningfully visual page or section:
+
+```text
+Desktop visual implementation/review
+        ↓
+Desktop visual approval
+        ↓
+Dedicated mobile art-direction pass
+        ↓
+Human + ChatGPT mobile visual approval
+        ↓
+Launch readiness
+```
+
+A dedicated mobile art-direction pass reviews mobile hierarchy, layout, crops, motion, and interaction on its own terms rather than assuming desktop intent survived the breakpoint. Do not treat a passing responsive breakpoint as mobile creative sign-off, and do not begin launch-readiness work before mobile visual approval is recorded in `AUREX-STATUS.md`.
 
 ## Session reset discipline
 
