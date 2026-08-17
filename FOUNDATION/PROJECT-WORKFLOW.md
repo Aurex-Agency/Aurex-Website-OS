@@ -185,7 +185,7 @@ Evaluate:
 
 Use actual browser inspection, not code review alone.
 
-Human gate: approve or redirect the hero and visual language.
+Human gate: approve or redirect the desktop hero and visual language. This is desktop visual approval, not mobile approval.
 
 Do not build the entire site while the visual foundation is still uncertain.
 
@@ -211,7 +211,9 @@ Review:
 
 Use explicit media placeholders when final assets are missing.
 
-Human gate: homepage approval.
+Human gate: desktop homepage visual approval.
+
+After desktop approval, preserve the approved concept and move into a dedicated mobile art-direction pass. Do not interpret desktop approval as permission to proceed directly to launch readiness.
 
 ## Phase 8: Page-category bundles
 
@@ -334,7 +336,9 @@ Default to motion intensity 3-7 depending on the brand.
 
 Use sophisticated animation only where it improves story, comprehension, attention, or perceived quality.
 
-## Phase 12: Responsive and accessibility QA
+## Phase 12: Mobile art direction, responsive, and accessibility QA
+
+Begin this phase only after desktop visual approval. Treat mobile as a first-class creative canvas, not as late responsive cleanup.
 
 Inspect representative pages across meaningful viewport sizes.
 
@@ -343,7 +347,10 @@ At minimum evaluate:
 - large desktop
 - laptop/tablet landscape
 - tablet/small desktop
-- common mobile width
+- 390x844 mobile
+- 393x852 mobile
+- representative mobile width around 430px
+- intermediate widths where the composition changes
 
 Check:
 
@@ -353,8 +360,14 @@ Check:
 - navigation
 - forms
 - image cropping
+- image focal points and viewport-specific crop decisions
 - overflow
 - content order
+- content density and pacing
+- CTA visibility, reachability, and sticky-action usability
+- touch interactions and alternatives to hover
+- sticky storytelling-section behavior throughout its full scroll range
+- motion adaptation without losing the approved concept
 - focus states
 - keyboard use
 - contrast
@@ -362,6 +375,12 @@ Check:
 - reduced motion
 
 Mobile must be actively designed, not merely functional.
+
+Technically responsive is not creatively approved. Inspect complete pages and meaningful scroll states at each recommended mobile viewport. For scroll-linked or sticky scenes, verify activation, progress, content/image synchronization, entry and exit behavior, and a usable reduced-motion state. Preserve native scrolling; do not use scroll-jacking.
+
+Human + ChatGPT gate: mobile visual approval. Record the evidence, approvers, date, reviewed commit/deployment, and any accepted conditions in `AUREX-STATUS.md` and `QA-REPORT.md`.
+
+STOP: Claude must not begin launch-readiness work while mobile approval is pending, rejected, conditional on unresolved blockers, or unrecorded.
 
 ## Phase 13: Technical, performance, and analytics QA
 
@@ -412,7 +431,9 @@ Fix critical and important issues before launch readiness.
 
 Confirm:
 
-- approvals are complete
+- desktop visual approval is complete and recorded
+- the dedicated mobile art-direction pass is complete
+- human and ChatGPT mobile visual approval is complete and recorded
 - production environment is configured
 - forms deliver correctly
 - tracking is live

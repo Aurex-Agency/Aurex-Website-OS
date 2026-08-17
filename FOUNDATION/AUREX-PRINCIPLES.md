@@ -201,6 +201,8 @@ Avoid:
 
 Mobile visitors are not receiving a lesser version of the website.
 
+Technically responsive is not equivalent to creatively approved on mobile. Desktop visual approval establishes the concept; it does not approve the mobile composition. Mobile requires its own art-direction pass and explicit visual approval before launch readiness.
+
 Re-evaluate:
 
 - hero height
@@ -211,11 +213,16 @@ Re-evaluate:
 - spacing
 - information order
 - animation intensity
+- motion adaptation and scroll choreography
+- touch interactions and non-hover alternatives
 - forms
 - sticky actions
+- sticky storytelling-section behavior
 - content density
 
-The mobile composition should feel intentional.
+Make viewport-specific image crop and focal-point decisions instead of inheriting desktop `object-position` values by default. The mobile composition should feel intentional, maintain CTA usability, and preserve native scrolling without scroll-jacking.
+
+Use 390x844, 393x852, and a representative width around 430px as recommended mobile review viewports, while also checking intermediate widths and real scroll states. Preserve reduced-motion, accessibility, performance, and content access in every adaptation.
 
 ## 13. Accessibility and performance are quality signals
 

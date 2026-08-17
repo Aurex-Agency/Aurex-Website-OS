@@ -18,4 +18,7 @@ paths:
 - Avoid excessive pills, badges, glass panels, gradients, shadows, rounded containers, and decorative grids unless the creative direction calls for them.
 - Typography hierarchy should be obvious without relying on color alone.
 - Responsive behavior may change composition, order, crop, alignment, and motion. Mobile is not a shrink pass.
+- After desktop visual approval, complete a dedicated mobile art-direction pass. Define viewport-specific composition, density, image focal points/crops, CTA placement, touch behavior, motion adaptation, and sticky-section behavior.
+- Technically responsive is not creatively approved. Stop for explicit human + ChatGPT mobile visual approval before launch-readiness work.
+- Preserve native scrolling, accessibility, performance, and reduced-motion behavior. Do not use scroll-jacking.
 - Before considering a section finished, ask whether it could be copied unchanged into an unrelated business. If yes, push the design closer to the approved concept.

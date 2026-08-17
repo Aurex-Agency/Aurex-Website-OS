@@ -10,6 +10,8 @@ A launch is a controlled transition, not merely a deploy button.
 
 ## Preconditions
 
+Do not begin launch-readiness work until `AUREX-STATUS.md` or equivalent durable state records desktop visual approval, completion of the dedicated mobile art-direction pass, and explicit human + ChatGPT mobile visual approval for the reviewed commit/deployment. A responsive test pass is not a substitute for mobile creative approval.
+
 Do not launch while known blockers remain in:
 
 - primary conversion
@@ -19,6 +21,7 @@ Do not launch while known blockers remain in:
 - production build
 - domain/DNS
 - critical integrations
+- mobile composition, crop art direction, motion/touch behavior, sticky-section behavior, or CTA usability
 
 ## 1. Confirm approved scope
 

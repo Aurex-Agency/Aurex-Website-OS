@@ -14,7 +14,10 @@
 
 ## 1. Approval
 
-- [ ] Homepage approved
+- [ ] Desktop homepage visually approved
+- [ ] Dedicated mobile art-direction pass complete
+- [ ] Human mobile visual approval recorded with date and reviewed commit/deployment
+- [ ] ChatGPT mobile visual approval recorded with review reference, date, and reviewed commit/deployment
 - [ ] All required page bundles approved
 - [ ] Final creative review complete
 - [ ] Technical QA complete
@@ -103,16 +106,26 @@ For every business-critical conversion:
 
 ## 9. Responsive
 
+Technically responsive is not creatively approved. Do not mark launch ready unless the separate mobile approval gate above is complete.
+
 - [ ] Large desktop reviewed
 - [ ] Laptop/small desktop reviewed
 - [ ] Tablet reviewed
-- [ ] Common mobile width reviewed
+- [ ] 390x844 reviewed through meaningful scroll states
+- [ ] 393x852 reviewed through meaningful scroll states
+- [ ] Representative width around 430px reviewed through meaningful scroll states
+- [ ] Intermediate responsive transitions reviewed
 - [ ] Navigation works at all representative sizes
 - [ ] Forms work with mobile keyboard
 - [ ] No material horizontal overflow
 - [ ] Media crops remain intentional
+- [ ] Mobile image focal points/crops were decided per viewport rather than inherited by default
 - [ ] Sticky UI does not block content or conversion
 - [ ] Signature motion has a valid mobile behavior
+- [ ] Sticky/scroll-linked sections complete their full mobile sequence and preserve native scrolling
+- [ ] Touch interactions and non-hover alternatives work
+- [ ] Mobile content density and pacing are intentionally composed
+- [ ] Primary CTAs remain visible, reachable, and comfortable to use
 
 ## 10. Performance
 

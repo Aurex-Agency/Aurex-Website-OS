@@ -40,6 +40,10 @@ List the strongest early ideas and why they were advanced or rejected.
 
 **Mobile translation:**
 
+Define mobile composition, hierarchy/order, density/pacing, CTA placement, touch interactions, viewport-specific image crops/focal points, motion adaptation, and sticky/scroll-linked section behavior. State how the concept remains recognizable without harming accessibility, performance, reduced-motion use, or native scrolling.
+
+**Mobile review viewports:** 390x844 / 393x852 / representative width around 430px
+
 **Required assets:**
 
 **Risks / guardrails:**
@@ -66,11 +70,21 @@ Use the same structure.
 
 **Status:** Draft / Approved / Needs revision
 
+**Desktop visual approval:** Pending / Approved (approver, date, commit/deployment)
+
+**Mobile art-direction pass:** Not started / In progress / Ready for review / Complete
+
+**Human mobile visual approval:** Pending / Approved (approver, date, conditions)
+
+**ChatGPT mobile visual approval:** Pending / Approved (review reference, date, conditions)
+
 **Human decision:**
 
 **Approved elements:**
 
 **Elements still open:**
+
+Desktop approval does not approve mobile. Claude must stop after the mobile art-direction pass and wait for human + ChatGPT mobile visual approval before launch-readiness work.
 
 ## Non-negotiable creative guardrails
 

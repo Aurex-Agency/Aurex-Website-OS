@@ -106,7 +106,13 @@ Respect reduced-motion preferences. Do not make users wait for animation before 
 
 Mobile is a separate design problem, not desktop stacked vertically.
 
-Review hierarchy, order, crop, navigation, forms, sticky UI, motion, tap targets, and content density specifically for smaller screens.
+Technically responsive is not creatively approved. After desktop visual approval, perform a dedicated mobile art-direction pass, then stop for explicit human and ChatGPT mobile visual approval before beginning launch-readiness work.
+
+Review composition, hierarchy, order, viewport-specific image crops and focal points, navigation, forms, sticky UI and sticky storytelling sections, motion adaptation, touch interactions, tap targets, CTA usability, and content density specifically for smaller screens. Preserve the desktop concept without treating mobile as a simplified fallback.
+
+Recommended mobile visual-review viewports are 390x844, 393x852, and a representative width around 430px. Inspect real scroll states and intermediate widths, not screenshots of page tops alone.
+
+Mobile adaptations must preserve accessibility, performance, reduced-motion behavior, and native scrolling. Do not use scroll-jacking.
 
 ## Evidence standard
 
@@ -158,6 +164,7 @@ Before launch, verify as appropriate:
 - security baseline
 - no material console errors
 - final visual QA
+- explicit mobile human and ChatGPT visual approval
 
 If something cannot be verified, label it unverified instead of assuming it works.
 

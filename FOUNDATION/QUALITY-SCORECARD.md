@@ -53,7 +53,7 @@ Is the writing specific, truthful, persuasive, useful, human-sounding, and appro
 Are important claims supported near the decision points where proof matters?
 
 ### 13. Mobile experience
-Does mobile feel intentionally designed, with appropriate hierarchy, forms, imagery, navigation, CTA access, and motion?
+Does mobile feel intentionally art-directed, with appropriate composition, hierarchy, density, forms, viewport-specific imagery crops, navigation, CTA access, touch interactions, motion adaptation, sticky-section behavior, accessibility, and performance?
 
 ### 14. Accessibility and usability
 Can people navigate, understand, and operate the experience reliably across common input and accessibility needs?
@@ -74,6 +74,7 @@ A website should not receive final Aurex approval when:
 - any BLOCKER remains
 - the primary conversion flow is untested
 - mobile contains known major failures
+- mobile is only technically responsive and lacks recorded human + ChatGPT creative approval
 - accessibility has known material barriers that can reasonably be fixed
 - the site materially diverges from the approved strategy or concept without an explicit decision
 - key business claims are unsupported or inaccurate

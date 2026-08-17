@@ -22,6 +22,7 @@ Define:
 - navigation behavior
 - scroll-linked behavior if justified
 - mobile reductions or alternatives
+- mobile-specific sticky/scroll choreography and touch behavior
 - reduced-motion behavior
 
 ## Tool choice
@@ -49,9 +50,11 @@ Do not turn a metaphor into a repeated gimmick.
 - respect `prefers-reduced-motion`
 - avoid motion required to access content
 - avoid expensive effects that cause visible jank
-- test actual mobile behavior
+- test actual mobile behavior at 390x844, 393x852, and a representative width around 430px when motion is visually significant
 - avoid scroll hijacking unless there is an exceptional, tested reason
 - ensure hover-only information has accessible alternatives
+
+Do not automatically replace a signature desktop scroll scene with a static stack on mobile. Preserve the same narrative purpose with viewport-specific choreography when it remains accessible, performant, touch-appropriate, and compatible with native scrolling. Verify sticky entry, progress, active-state/image synchronization, exit, CTA access, and reduced-motion behavior through the full sequence.
 
 ## QA
 

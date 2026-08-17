@@ -10,6 +10,16 @@
 
 **Recommended next action:**
 
+**Desktop visual verdict:** Pending / Approved / Revise
+
+**Mobile visual verdict:** Not reviewed / Revise / Approved with conditions / Approved
+
+**Reviewed commit/deployment:**
+
+**Human mobile approval:** Pending / Approved (name and date)
+
+**ChatGPT mobile approval:** Pending / Approved (review reference and date)
+
 ## Scope reviewed
 
 **Pages:**
@@ -71,6 +81,22 @@ Note any evidence of repeated card grids, generic heroes, default component styl
 
 **Mobile:**
 
+**390x844:**
+
+**393x852:**
+
+**~430px:**
+
+**Composition and density:**
+
+**Viewport-specific crops/focal points:**
+
+**Motion, touch, and sticky sections:**
+
+**CTA usability:**
+
+**Reduced motion, accessibility, performance, and native scrolling:**
+
 ## Conversion audit
 
 **Primary CTA:**
@@ -97,4 +123,6 @@ Track important issues fixed during the QA loop so later reviewers understand wh
 
 ## Final conditions for approval
 
-- 
+- Desktop and mobile receive distinct visual verdicts.
+- Technically responsive is not accepted as evidence of mobile creative approval.
+- Human + ChatGPT mobile visual approval is recorded before launch readiness.

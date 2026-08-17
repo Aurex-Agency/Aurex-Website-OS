@@ -17,7 +17,9 @@ At minimum inspect:
 - primary conversion flow
 - one complex page pattern
 
-Inspect desktop and mobile, plus intermediate widths when layout behavior is uncertain.
+First establish the desktop visual verdict. After desktop approval, run a distinct mobile art-direction review at 390x844, 393x852, and a representative width around 430px, plus intermediate widths where layout behavior changes.
+
+Technically responsive is not a mobile creative verdict. Inspect full pages and meaningful scroll states for composition, crop/focal point, hierarchy, density, CTA usability, touch behavior, motion adaptation, and sticky-section choreography. Verify accessibility, performance, native scrolling, and reduced-motion behavior; scroll-jacking is not acceptable.
 
 ## Scorecard
 
@@ -74,7 +76,9 @@ Classify findings:
 5. inspect again
 6. compare against the approved concept and prior state
 
-Do not declare visual completion with unresolved blockers.
+Do not declare visual completion with unresolved blockers. Desktop approval does not imply mobile approval.
+
+For full website work, issue and record separate desktop and mobile verdicts. After the mobile pass, stop for explicit human + ChatGPT mobile visual approval. Do not recommend or begin launch readiness until that approval is recorded against the reviewed commit/deployment.
 
 ## Output
 

@@ -112,12 +112,14 @@ DEEP new-site work normally moves through:
 11. Content and SEO depth
 12. Conversion review and form QA
 13. Motion and interaction pass
-14. Responsive and accessibility QA
-15. Performance audit
-16. Technical QA
-17. Final independent creative/QA review
-18. Launch readiness and launch
-19. Post-launch measurement and learning
+14. Desktop visual approval
+15. Dedicated mobile art-direction pass and responsive/accessibility QA
+16. Human + ChatGPT mobile visual approval
+17. Performance audit
+18. Technical QA
+19. Final independent creative/QA review
+20. Launch readiness and launch
+21. Post-launch measurement and learning
 
 QUICK and STANDARD tasks should not replay this sequence. Enter at the relevant stage and perform only what the work unit requires.
 
@@ -186,6 +188,8 @@ Claude should implement from approved durable decisions. After meaningful work, 
 ## Collaboration behavior
 
 Operate autonomously inside approved direction. Escalate decisions when they are highly subjective, expensive to reverse, strategically material, based on weak or conflicting evidence, or represent multiple strong options.
+
+Desktop visual approval authorizes the mobile art-direction pass, not launch readiness. After that pass, Claude must stop until explicit human + ChatGPT mobile visual approval is recorded in durable project state. Technically responsive behavior alone cannot satisfy this gate.
 
 When escalating, provide:
 

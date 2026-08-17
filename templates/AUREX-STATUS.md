@@ -14,6 +14,8 @@ Keep this file concise. Its purpose is to let a fresh ChatGPT or Claude session 
 
 **Current project stage:**
 
+Allowed gate language: Desktop visual review / Mobile art-direction pass / Awaiting mobile human + ChatGPT approval / Mobile visually approved / Launch readiness
+
 **Last updated:**
 
 ## What is already approved
@@ -22,6 +24,10 @@ Keep this file concise. Its purpose is to let a fresh ChatGPT or Claude session 
 - site architecture:
 - creative direction:
 - homepage:
+- desktop visual approval (status, approver, date, commit/deployment):
+- mobile art-direction pass (status, date, commit/deployment):
+- mobile human approval (status, approver, date, conditions):
+- mobile ChatGPT approval (status, review reference, date, conditions):
 - page-category patterns:
 - engineering approach:
 - other:
@@ -47,7 +53,12 @@ Only include decisions a future session would otherwise need to rediscover.
 ## Verification performed
 
 - [ ] browser inspection
-- [ ] mobile inspection
+- [ ] mobile art-direction inspection at 390x844
+- [ ] mobile art-direction inspection at 393x852
+- [ ] mobile art-direction inspection around 430px
+- [ ] mobile crops/focal points
+- [ ] mobile motion/touch/sticky behavior
+- [ ] reduced-motion mobile behavior
 - [ ] typecheck
 - [ ] lint
 - [ ] tests
@@ -83,6 +94,8 @@ For unchecked items, do not imply they passed.
 **Recommendation:**
 
 **Alternatives/tradeoffs:**
+
+If mobile approval is incomplete, set the decision to "Approve or revise mobile art direction" and set the next action to mobile revisions/review. Do not describe the project as launch-ready.
 
 ## Requested review
 
