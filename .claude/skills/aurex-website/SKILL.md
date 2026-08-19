@@ -40,7 +40,7 @@ Escalate to STANDARD when the task becomes ambiguous or materially affects user/
 
 For meaningful page, feature, conversion, design, or content work.
 
-Default: STANDARD model class, relevant skills, zero to two focused specialists when useful, browser verification, durable artifact updates when decisions change.
+Default: STANDARD model class, relevant skills, zero or one focused specialist when useful, browser verification, durable artifact updates when decisions change. A second specialist requires a distinct question that cannot be answered efficiently by the primary session or first specialist.
 
 STANDARD is the normal default for day-to-day production work.
 
@@ -50,7 +50,7 @@ For new websites, major redesigns, architecture or migration decisions, major co
 
 DEEP is mixed-model by design. Use STANDARD for evidence gathering and implementation where sufficient. Reserve PREMIUM for high-leverage synthesis, high-risk decisions, difficult escalation, or final executive judgment.
 
-Use multiple specialists only when each has a distinct question and deliverable.
+Use multiple specialists only when each has a distinct question and deliverable. For a single DEEP phase, default to no more than three specialists; exceed that only when named independent risks justify it and record the reason.
 
 Do not use DEEP merely because specialists exist.
 
@@ -112,14 +112,15 @@ DEEP new-site work normally moves through:
 11. Content and SEO depth
 12. Conversion review and form QA
 13. Motion and interaction pass
-14. Desktop visual approval
-15. Dedicated mobile art-direction pass and responsive/accessibility QA
-16. Human + ChatGPT mobile visual approval
-17. Performance audit
-18. Technical QA
-19. Final independent creative/QA review
-20. Launch readiness and launch
-21. Post-launch measurement and learning
+14. Browser-first polish, maximum two bounded passes
+15. Desktop Visual Acceptance
+16. Dedicated mobile art-direction pass and responsive/accessibility QA
+17. Human + ChatGPT mobile visual approval
+18. Performance audit
+19. Technical QA
+20. Final Visual Acceptance confirmation when implementation changed
+21. Launch readiness and launch
+22. Post-launch measurement and learning
 
 QUICK and STANDARD tasks should not replay this sequence. Enter at the relevant stage and perform only what the work unit requires.
 
@@ -148,6 +149,7 @@ Use only the skills relevant to the task:
 - `/aurex-performance`
 - `/aurex-technical-qa`
 - `/aurex-visual-qa`
+- `/aurex-polish`
 - `/aurex-launch`
 
 ## Specialist delegation
@@ -168,7 +170,7 @@ Default model-class guidance:
 - QA Reviewer: STANDARD
 - Launch Engineer: STANDARD, PREMIUM review when production risk is high
 
-Do not delegate every task because agents exist. Prefer one focused specialist over overlapping specialists. Do not use agent teams by default.
+Do not delegate every task because agents exist. QUICK defaults to zero specialists. STANDARD defaults to zero and is routinely capped at one. DEEP defaults to the fewest necessary and is routinely capped at three per phase. Prefer one focused specialist over overlapping specialists. Do not use agent teams by default. Do not treat skills, agents, or reports as milestones unless they produce a decision or verified result needed by the current work.
 
 ## ChatGPT and Claude collaboration
 

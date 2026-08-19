@@ -21,6 +21,7 @@ For the page or page bundle, establish:
 - relationship to the site narrative
 - unique media/assets needed
 - creative concept moments appropriate to this page
+- which of the approved 1-3 signature moments this page carries, if any
 
 ## Page narrative
 
@@ -47,6 +48,8 @@ Follow the approved design system while preserving enough compositional variety 
 
 Use imagery as content. If a needed visual is unavailable, create a clear placeholder and document the exact asset needed rather than weakening the concept.
 
+Implement the approved signature moments with restraint. A site should normally have 1-3 total, not one novelty per section. Preserve their narrative purpose, mobile translation, reduced-motion fallback, accessibility, and performance.
+
 ## Conversion
 
 Make CTA placement contextual. Keep the primary action recognizable across pages. Ensure forms and interactive conversion elements follow the conversion plan.
@@ -66,10 +69,12 @@ After implementation:
 1. run the page
 2. inspect it visually at desktop and mobile sizes
 3. compare against the approved concept and page purpose
-4. identify generic, repetitive, awkward, or conversion-weak areas
-5. revise
+4. review macro issues before micro details: narrative/hierarchy, composition/rhythm, imagery, type/color, signature moments, responsive translation, then fine polish
+5. revise the highest-impact issues
 
 Do not call the page finished from code inspection alone.
+
+For a dedicated finishing cycle, use `/aurex-polish`. It permits two bounded browser-led refinement passes; it is not an invitation to redesign indefinitely.
 
 ## Bundle behavior
 

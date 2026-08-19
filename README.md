@@ -47,13 +47,13 @@ Default: one Claude session, directly relevant files, no broad research, no spec
 
 The normal mode for meaningful production work such as a new page pattern, section redesign, lead flow, approved homepage implementation, or focused audit.
 
-Default: primary session, relevant skills, zero to two focused specialists when useful, browser verification.
+Default: primary session, relevant skills, zero specialists by default and one routinely when useful, browser verification. A second requires a distinct unresolved question.
 
 ### DEEP
 
 For new websites, major redesigns, site architecture, migrations, major conversion systems, or high-stakes final audits.
 
-DEEP can use broader research and multiple specialists, but only when each has a defined question and deliverable.
+DEEP can use broader research and multiple specialists, but only when each has a defined question and deliverable; routine use is capped at three per phase.
 
 DEEP is not the default.
 
@@ -124,6 +124,7 @@ Routine execution inside an approved direction should continue autonomously unti
 - `/aurex-responsive`
 - `/aurex-seo`
 - `/aurex-visual-qa`
+- `/aurex-polish` - browser-first, macro-before-micro refinement capped at two passes
 
 ### Engineering and production
 
@@ -160,8 +161,9 @@ For a new Aurex SMB marketing site without unusual constraints, the starting poi
 - TypeScript
 - Tailwind CSS with client-specific design tokens
 - React Server Components by default
-- Motion for most animation
-- GSAP/ScrollTrigger only for advanced choreography
+- Motion as the default premium layer for most React animation
+- native CSS for simple transitions and hover/focus states
+- GSAP/ScrollTrigger, Rive, and Three.js/React Three Fiber only when an approved concept requires their specialized capabilities
 - Radix/shadcn primitives only when useful, with custom styling
 - Vercel unless the project requires another platform
 
@@ -182,6 +184,8 @@ The production layer includes:
 
 Automation catches repeatable failures. It does not replace browser review, creative judgment, or manual accessibility testing.
 
+Motion AI Kit is configured once in the Claude Code development environment, not installed into every client site. It supplies current Motion documentation and implementation tooling while Aurex retains creative direction. Client repositories receive only the runtime dependencies their approved concepts use. See `references/MOTION-AI-TOOLING.md`.
+
 ## Production quality principles
 
 Aurex expects server-first rendering, optimized media/fonts, accessibility, secure public inputs, real form delivery verification, meaningful analytics, production build verification, responsive browser QA, performance review, controlled launch, and independent visual QA.
@@ -196,12 +200,13 @@ Aurex expects server-first rendering, optimized media/fonts, accessibility, secu
 - `templates/` - durable project and handoff artifacts
 - `starter/` - automation and test starters for client repos
 - `references/` - evolving research and patterns
+- `references/visual/INDEX.md` - curated visual principles with provenance and anti-copy notes
 - `COLLABORATION-QUICKSTART.md` - simple ChatGPT/Claude workflow
 - `USAGE.md` - full operating instructions
 
 ## Current stage
 
-**Phase 3.5: Efficiency and collaboration protocol built**
+**Phase 3.6: Visual production loop tightened**
 
 Phase 1 established the Aurex philosophy and workflow.
 
@@ -210,5 +215,7 @@ Phase 2 created the specialist strategy and creative brain.
 Phase 3 connected that brain to a production engineering, QA, automation, and launch system.
 
 Phase 3.5 adds proportional QUICK/STANDARD/DEEP operating modes, specialist cost discipline, session/context rules, durable ChatGPT-to-Claude handoffs, project status checkpoints, and a GitHub-centered review loop.
+
+Phase 3.6 adds bounded browser-first polish, macro-before-micro review, explicit Visual Acceptance separate from Technical QA, 1-3 signature moments, and a structured visual reference library without changing the operating modes or mobile approval gate.
 
 The next priority is real-world battle testing on an existing Aurex website so the system can learn from actual implementation behavior rather than continuing to grow only in theory.

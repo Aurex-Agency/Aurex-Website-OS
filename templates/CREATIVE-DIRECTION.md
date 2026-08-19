@@ -32,6 +32,14 @@ List the strongest early ideas and why they were advanced or rejected.
 
 **Motion language:**
 
+**Signature moments (1-3):**
+
+For each: purpose, location, behavior, mobile translation, reduced-motion fallback, and implementation guardrail.
+
+**Selected visual references:**
+
+For each: source/library entry, principle borrowed, and what must not be copied.
+
 **Hero idea:**
 
 **Section transitions:**

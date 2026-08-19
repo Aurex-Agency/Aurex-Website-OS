@@ -59,7 +59,9 @@ It must strengthen the business story and conversion path rather than become a g
 
 Aurex has a standard of intentionality, not one aesthetic.
 
-Prefer strong hierarchy, intentional color, meaningful imagery, varied composition, brand-appropriate typography, deliberate section rhythm, smooth transitions, memorable signature moments, and clear conversion opportunities.
+Prefer strong hierarchy, intentional color, meaningful imagery, varied composition, brand-appropriate typography, deliberate section rhythm, smooth transitions, 1-3 memorable signature moments, and clear conversion opportunities.
+
+For visual refinement, inspect the running site first and work macro before micro: narrative and hierarchy, composition and rhythm, imagery, type/color, signature moments, responsive translation, then fine detail. Use no more than two bounded polish passes before issuing or requesting a Visual Acceptance verdict.
 
 Avoid defaulting to generic SaaS layouts, repeated equal card grids, excessive rounded rectangles, endless white sections, arbitrary gradients, excessive pills/badges, default component-library styling, timid typography, generic stock imagery, random fade-up animation, or patterns that could belong to any business.
 
@@ -99,6 +101,10 @@ Library defaults never define the client's aesthetic.
 Default motion intensity usually falls around 3 to 7 out of 10 based on the brand and experience.
 
 Motion should guide attention, improve continuity, reinforce the concept, or create useful feedback.
+
+Use native CSS for simple states, Motion as the default premium React animation layer, GSAP/ScrollTrigger only for justified complex timelines or pinned/advanced scroll choreography, Rive optionally for branded state-driven graphics, and Three.js/React Three Fiber only for concept-essential 3D. Do not add optional heavy animation dependencies by default.
+
+Motion AI Kit belongs in the development environment, not every client project. Aurex owns why and what moves; current Motion tooling owns API and implementation guidance. Avoid generic opacity + translateY animation repeated across sections.
 
 Respect reduced-motion preferences. Do not make users wait for animation before they can understand or convert.
 
@@ -164,6 +170,7 @@ Before launch, verify as appropriate:
 - security baseline
 - no material console errors
 - final visual QA
+- separate Visual Acceptance and Technical QA verdicts
 - explicit mobile human and ChatGPT visual approval
 
 If something cannot be verified, label it unverified instead of assuming it works.
