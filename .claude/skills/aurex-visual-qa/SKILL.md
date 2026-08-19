@@ -1,9 +1,11 @@
 ---
 name: aurex-visual-qa
-description: Performs browser-based creative, UX, conversion, responsive, accessibility, and polish review of a running Aurex website and drives iterative fixes.
+description: Issues browser-based Visual Acceptance verdicts for a running Aurex website, separate from technical QA, after bounded refinement is complete.
 ---
 
 # Aurex Visual QA
+
+Read `FOUNDATION/VISUAL-ACCEPTANCE-STANDARD.md`. This skill owns the creative acceptance verdict. It does not duplicate build, lint, security, integration, crawlability, or other Technical QA checks.
 
 Do not review a frontend only from source code. Inspect the running experience whenever browser tools are available.
 
@@ -23,6 +25,8 @@ Technically responsive is not a mobile creative verdict. Inspect full pages and 
 
 ## Scorecard
 
+Review macro before micro: narrative/hierarchy and conversion path; composition/scale/rhythm; imagery; typography/color; signature moments; responsive translation; then component details and polish.
+
 Score each area from 1-10 with evidence:
 
 1. business/message clarity
@@ -40,6 +44,8 @@ Score each area from 1-10 with evidence:
 13. trust and proof
 14. accessibility/usability
 15. perceived performance and polish
+
+Explicitly verify whether the approved 1-3 signature moments are present, purposeful, coherent, and successfully translated to mobile and reduced motion.
 
 A numeric score without specific observations is not useful.
 
@@ -67,16 +73,14 @@ Classify findings:
 - MAJOR: makes the work feel generic, unfinished, inconsistent, or strategically weak
 - POLISH: worthwhile refinement that does not block approval
 
-## Iteration loop
+## Acceptance loop
 
-1. inspect
-2. document evidence
-3. prioritize blockers and majors
-4. fix
-5. inspect again
-6. compare against the approved concept and prior state
+1. inspect the rendered experience
+2. document evidence in macro-before-micro order
+3. compare against the approved concept, signature moments, and prior state
+4. issue the verdict
 
-Do not declare visual completion with unresolved blockers. Desktop approval does not imply mobile approval.
+If fixes are needed, route the bounded refinement through `/aurex-polish`, then re-run Visual Acceptance. Do not create an unlimited QA/fix loop. Do not declare visual completion with unresolved blockers. Desktop approval does not imply mobile approval.
 
 For full website work, issue and record separate desktop and mobile verdicts. After the mobile pass, stop for explicit human + ChatGPT mobile visual approval. Do not recommend or begin launch readiness until that approval is recorded against the reviewed commit/deployment.
 

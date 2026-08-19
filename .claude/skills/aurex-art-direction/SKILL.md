@@ -32,7 +32,7 @@ Do not begin with a trend label such as "modern luxury," "glassmorphism," or "Aw
 - image/video treatment
 - layout and composition philosophy
 - shapes, masks, surfaces, texture, and depth
-- signature interaction or motion moments
+- 1-3 signature moments, each with its narrative purpose, location, responsive translation, and fallback
 - section-transition language
 - CTA and form integration
 - mobile translation
@@ -41,7 +41,11 @@ Do not begin with a trend label such as "modern luxury," "glassmorphism," or "Aw
 
 ## Visual reference behavior
 
-Use references to extract principles, not to clone layouts. Explain exactly what is being borrowed conceptually, such as pacing, image scale, contrast, typography hierarchy, or interaction behavior.
+Read `references/README.md` and the relevant entries in `references/visual/INDEX.md` when the library contains useful material. Select a small reference set, normally three to five entries. Use references to extract principles, not to clone layouts. Explain exactly what each contributes, such as pacing, image scale, contrast, typography hierarchy, crop behavior, or interaction logic, and state what must not be copied.
+
+## Signature moments
+
+Every approved direction must name 1-3 memorable moments. They may be compositional, typographic, image-led, interactive, or motion-led; they do not need a new library. Each must reinforce the business story or conversion journey and remain recognizable on mobile and with reduced motion. More than three usually dilutes the concept.
 
 ## Premium test
 
@@ -57,6 +61,8 @@ Create or update `CREATIVE-DIRECTION.md` with:
 4. recommended direction and rationale
 5. rejected risks and patterns
 6. required imagery/video/visual assets
-7. decision required from human creative lead
+7. selected reference principles and provenance
+8. 1-3 signature moments and implementation guardrails
+9. decision required from human creative lead
 
 Do not implement the full site until the direction is approved.

@@ -58,7 +58,7 @@ Default behavior:
 
 - one primary Claude session
 - load only relevant Aurex skills
-- use at most one or two specialist agents when independent deep work materially improves the result
+- use zero specialists by default and at most one routinely; a second requires a distinct unresolved question and expected deliverable
 - reuse approved project artifacts instead of repeating discovery
 - perform browser verification for user-facing changes
 - update durable project artifacts when a decision should survive the session
@@ -80,7 +80,7 @@ Typical examples:
 - final pre-launch review
 - high-stakes performance, accessibility, analytics, or migration work
 
-DEEP may use multiple specialist agents and broader research, but each specialist must have a defined question and deliverable.
+DEEP may use multiple specialist agents and broader research, but each specialist must have a defined question and deliverable. Default to no more than three specialists in a single project phase. If more are genuinely needed, record the independent risks that justify the exception.
 
 Do not invoke specialists merely because they exist.
 
@@ -112,6 +112,8 @@ Before invoking a specialist agent, define:
 Do not ask multiple specialists to independently analyze the entire project unless their disagreement is valuable.
 
 Prefer one focused specialist over an agent team.
+
+Do not chain specialists merely to approve one another. A skill invocation, agent report, or new artifact is justified only when it changes a decision, implementation, or verification result required by the current work.
 
 ## Context discipline
 

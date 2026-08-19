@@ -16,6 +16,8 @@
 
 **Reviewed commit/deployment:**
 
+**Visual Acceptance is separate from Technical QA:** Yes / No
+
 **Human mobile approval:** Pending / Approved (name and date)
 
 **ChatGPT mobile approval:** Pending / Approved (review reference and date)
@@ -32,6 +34,8 @@
 
 ## Quality scorecard
 
+Review and record findings macro before micro: narrative/hierarchy, composition/rhythm, imagery, typography/color, signature moments, responsive translation, then fine detail.
+
 | Dimension | Score /10 | Evidence / reason |
 |---|---:|---|
 | Business clarity | | |
@@ -44,6 +48,7 @@
 | Imagery/media | | |
 | Page rhythm/storytelling | | |
 | Motion/interaction | | |
+| Signature moments (1-3) | | |
 | Content/copy | | |
 | Trust/proof | | |
 | Mobile | | |

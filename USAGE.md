@@ -40,7 +40,7 @@ Default: no specialists, no broad research, targeted verification.
 
 Meaningful daily production work such as a page, section, feature, lead flow, or approved homepage implementation.
 
-Default: primary session, relevant skills, zero to two focused specialists when useful, browser verification.
+Default: primary session, relevant skills, zero specialists by default and one routinely when useful, browser verification. A second requires a distinct unresolved question.
 
 ### DEEP
 
@@ -256,7 +256,8 @@ Not every project needs every file.
 - `/aurex-motion`
 - `/aurex-responsive`
 - `/aurex-seo`
-- `/aurex-visual-qa`
+- `/aurex-polish` for no more than two browser-first refinement passes
+- `/aurex-visual-qa` for the separate Visual Acceptance verdict
 
 ### Engineering and production
 
@@ -275,11 +276,27 @@ The orchestrator should call only the skills needed for the current work.
 
 Specialists exist for research, creative direction, conversion, SEO, content, motion, frontend architecture, performance, accessibility, independent QA, and launch engineering.
 
-Before invoking one, define the exact question.
+Before invoking one, define the exact question. QUICK defaults to zero specialists. STANDARD defaults to zero and is routinely capped at one; a second requires a distinct unresolved question. DEEP is routinely capped at three specialists per phase unless independent named risks justify more.
 
 Prefer one focused specialist over overlapping specialists.
 
 Do not use agent teams by default.
+
+## Visual finish and acceptance
+
+After a page or representative pattern is runnable, use `/aurex-polish` for browser-first refinement. It reviews macro composition before micro detail and stops after two implementation-and-reinspection passes.
+
+Then use `/aurex-visual-qa` to record Visual Acceptance. Keep this verdict separate from `/aurex-technical-qa`; both are required when their scope applies. The existing desktop-to-mobile art-direction gate and explicit human + ChatGPT mobile approval remain unchanged.
+
+Art direction should define 1-3 signature moments for the site. Use `references/visual/INDEX.md` to select a small set of visual principles with source provenance and explicit anti-copy notes.
+
+## Motion AI tooling
+
+Configure Motion AI Kit globally for Claude Code using Motion's current official installer, not inside every client repository. See `references/MOTION-AI-TOOLING.md` for the current command, hosted-MCP migration note, and responsibility boundary.
+
+Aurex decides why and what moves, intensity, choreography, brand fit, conversion impact, responsive behavior, restraint, and which signature moments use motion. Motion's tooling supplies current API syntax, implementation patterns, performance guidance, and reduced-motion practices.
+
+Route implementation through native CSS for simple states, Motion for most React animation, GSAP/ScrollTrigger only for justified complex timelines or advanced scroll storytelling, Rive for approved branded state-driven graphics, and Three.js/React Three Fiber only for concept-essential 3D. Do not add optional heavy dependencies to the starter or a client project by default.
 
 ## Claude hooks
 
